@@ -1,2 +1,38 @@
-this is a Text
-hello word!
+gulp项目
+1. 全局安装 gulp：
+
+	$ npm install --global gulp
+
+2. 作为项目的开发依赖（devDependencies）安装：
+
+	$ npm install --save-dev gulp
+
+3. 在项目根目录下创建一个名为 gulpfile.js 的文件：
+
+	var gulp = require('gulp');
+	gulp.task('default', function() {
+ 	 // 将你的默认的任务代码放在这
+	});
+
+4. 运行 gulp：
+
+5.使用 npm init 即可在当前目录创建一个 package.json 文件：
+6.npm install 默认会安装 package.json 中 dependencies 和 devDependencies 里的所有模块。
+
+另一种更酷的方式是用命令行，在使用 npm install 时增加 --save 或者 --save -dev 后缀：
+
+    npm install <package_name> --save 表示将这个包名及对应的版本添加到 package.json的 dependencies
+    npm install <package_name> --save-dev 表示将这个包名及对应的版本添加到 package.json的 devDependencies
+    baiduyun.api.key->rjTQUTheSVQOEVXbSniwpFYF8KyLE3Qe	
+7.编写package.json文件，加入需要的依赖
+
+
+
+vue项目
+//全局安装vue-cli
+1.npm install --global vue-cli
+//创建一个基于webpack 模板的新项目
+2.vue init webpack my-project
+//安装依赖，走你
+3.cd my-project
+4.npm run dev
