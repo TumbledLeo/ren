@@ -28,7 +28,7 @@ gulp项目
 
 
 
-vue项目
+vue项目----------name:myvue
 //全局安装vue-cli
 1.npm install --global vue-cli
 //创建一个基于webpack 模板的新项目
