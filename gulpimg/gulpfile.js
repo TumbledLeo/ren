@@ -49,7 +49,15 @@ gulp.task('image', function () {
 //   .pipe(gulp.dest('dist/css'))
 // })
 
-
+////////////////////////////////搬运//////////////////////
+gulp.task('ban',function(){
+  gulp.src(app.srcPath + 'lib/**')
+    .pipe(gulp.dest(app.distPath + 'lib'))
+})
+gulp.task('yun',function(){
+  gulp.src(app.srcPath +'**/*.html')
+    .pipe(gulp.dest(app.distPath))
+})
 /////////////////////html////////////////////
 
 
@@ -116,4 +124,4 @@ gulp.task('server', function () {
   // gulp.watch(app.srcPath + 'm/style/**/*.scss', ['mobile-css']);
   open('http://localhost:9999');
 });
-gulp.task('default', ['image','htmlmin','jsmin','cssmin','server']);
+gulp.task('default', ['image','htmlmin','ban','yun','jsmin','cssmin','server']);
