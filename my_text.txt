@@ -36,3 +36,12 @@
 //安装依赖，走你
 3.cd my-project
 4.npm run dev
+
+//解决vue文件不高亮显示的问题：
+file->preferences->settting->...->open setting.json->add
+
+ "emmet.includeLanguages": {   "vue": "html",  
+     "vue-html": "html" },
+     "editor.tabSize":2
+
+搞定
