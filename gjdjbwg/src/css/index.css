@@ -154,6 +154,7 @@ header .nav li:hover{
 }
 .cang  .right{
   width:758px;
+  position: relative;
 }
 .cang  .right h2{
   float:left;
@@ -163,6 +164,8 @@ header .nav li:hover{
   font-size: 18px;
   float:right;
   line-height:40px;
+  position: absolute;
+  top:12px;right:0;
 }
 .cang  .right .time h3{
   padding-left:24px;
