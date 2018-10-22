@@ -104,6 +104,6 @@ gulp.task('server', function () {
   gulp.watch(app.srcPath + 'css/**/*.css', ['cssmin']);
   // gulp.watch(app.srcPath + 'style/**/*.scss', ['scss']);
   // gulp.watch(app.srcPath + 'm/style/**/*.scss', ['mobile-css']);
-  open('http://localhost:9999');
+  open('http://localhost:9998');
 });
 gulp.task('default', ['image','jsmin','cssmin','yun','ban','server']);

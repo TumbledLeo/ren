@@ -9,6 +9,11 @@ $(function(){
   },function(){
     $(this).find('img').attr("src","img/more1.png");
   });
+  $('.bo  a').hover(function(){
+    $(this).find('img').attr("src","img/more3.png");
+  },function(){
+    $(this).find('img').attr("src","img/more33.png");
+  });
   // tab切换
 function tabCtrl(ele) {
   $(ele + ' .tabContents .tabContent').hide().eq(0).show();
