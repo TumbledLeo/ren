@@ -72,12 +72,17 @@ header .nav li{
   color:#fff;
   margin:0 50px;
   font-size: 18px;
+  transition: all .4s;
+  background:url(../img/tab_banner.png)no-repeat 500% bottom;
 }
 header .nav li.active{
-  border-bottom:3px solid #b28750
+  /* border-bottom:3px solid #b28750 */
+  background:url(../img/tab_banner.png)no-repeat 100% bottom;
 }
 header .nav li:hover{
-  border-bottom:3px solid #b28750
+  /* border-bottom:3px solid #b28750; */
+  background:url(../img/tab_banner.png)no-repeat 100% bottom;
+
 }
 .banner .con{
   position: absolute;
