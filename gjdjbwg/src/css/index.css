@@ -109,7 +109,7 @@ header .nav li:hover{
 }
 .cang{
   margin-top:80px;
-  margin-bottom:104px;
+  margin-bottom:94px;
 }
 .cang h2{
   font-size: 32px;
@@ -218,7 +218,7 @@ header .nav li:hover{
   }
   .news .tabs li.active a{
     color:#b28850;
-    border-bottom:2px solid #e2a552;
+    border-bottom:4px solid #e2a552;
   }
   .news .tabContent li{
     width:100%;
@@ -376,7 +376,7 @@ header .nav li:hover{
   /* .wenc .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: -47px;} */
     .wc{
-      padding-top:30px;
+      padding:40px 0;
     }
     .wc h2{
       line-height:52px;
