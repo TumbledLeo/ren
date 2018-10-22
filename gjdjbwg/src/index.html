@@ -51,7 +51,7 @@
             </div>
           </div>
         </li>
-        <li class="swiper-slide">
+        <!-- <li class="swiper-slide">
           <div class="wrap">
             <img src="img/banner1_bg.jpg" alt="">
             <div class="con">
@@ -59,7 +59,7 @@
               <div class="right"></div>
             </div>
           </div>
-        </li>
+        </li> -->
       </ul>
       <div class="swiper-pagination"><img src="img/fenye.png" alt=""></div>
     </div>
@@ -434,11 +434,7 @@
 <script>
   var mySwiper = new Swiper('.swiper-container1', {
     autoplay: false,//可选选项，自动滑动
-    loop : true,
-    /*如果只有一个slide就销毁swiper
-  if(mySwiper.slides.length<=3){
-    mySwiper.destroy();
-  }*/
+    loop : false,
   pagination: {
     el: '.swiper-pagination',
     //type: 'bullets',
@@ -446,26 +442,26 @@
     //type : 'progressbar',
     type : 'custom',
   },
-  // 如果需要分页器
-  //pagination: '.swiper-pagination',
-	//paginationType: 'custom',//这里分页器类型必须设置为custom,即采用用户自定义配置
-	// 		//下面方法可以生成我们自定义的分页器到页面上
-			paginationCustomRender: function(swiper, current, total) {
-				var customPaginationHtml = "";
-				for(var i = 0; i < total; i++) {
-					//判断哪个分页器此刻应该被激活
-					if(i == (current - 1)) {
-						customPaginationHtml += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
-					} else {
-						customPaginationHtml += '<span class="swiper-pagination-customs"></span>';
-					}
-				}
-				return customPaginationHtml;
-			}
- });
+  renderCustom: function(swiper,current, total){
+        var paginationHtml = "";
+        for(var i= 0; i< total; i++) {
+         // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
+           if(i === (current -1)){
+              paginationHtml = '<span class="swiper-pagination-customs swiper-pagination-customs-activ"></span>';
+            }
+              paginationHtml = '<span class="swiper-pagination-customs"></span>';
+         }
+        return paginationHtml;
+     } 
+    
+  });
+   //如果只有一个slide就销毁swiper
+  // if(mySwiper.slides.length<=3){
+  //   mySwiper.destroy();
+  // }
  var mySwiper1 = new Swiper('.swiper-container2', {
     autoplay: false,//可选选项，自动滑动
-    loop : true,
+    loop : false,
     pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
@@ -476,7 +472,7 @@
  })
  var mySwiper2 = new Swiper('.swiper-container3', {
     autoplay: false,//可选选项，自动滑动
-    loop : true,
+    loop : false,
     pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
