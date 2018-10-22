@@ -122,7 +122,7 @@ header .nav li:hover{
   width:400px;
 }
 .cang .time{
-  padding-left:30px;
+  /* padding-left:30px; */
   padding-top:26px;
 }
 .cang .wrap .time  p{

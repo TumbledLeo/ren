@@ -432,7 +432,7 @@
 <script src="lib/swiper.min.js" type=""></script>
 <script src="js/index.js" type=""></script>
 <script>
-  var mySwiper = new Swiper('.swiper-container1', {
+ var mySwiper = new Swiper('.swiper-container1', {
     autoplay: false,//可选选项，自动滑动
     loop : false,
   pagination: {
@@ -452,13 +452,8 @@
               paginationHtml = '<span class="swiper-pagination-customs"></span>';
          }
         return paginationHtml;
-     } 
-    
+     }     
   });
-   //如果只有一个slide就销毁swiper
-  // if(mySwiper.slides.length<=3){
-  //   mySwiper.destroy();
-  // }
  var mySwiper1 = new Swiper('.swiper-container2', {
     autoplay: false,//可选选项，自动滑动
     loop : false,
@@ -469,7 +464,7 @@
     //type : 'progressbar',
     //type : 'custom',
   },
- })
+ });
  var mySwiper2 = new Swiper('.swiper-container3', {
     autoplay: false,//可选选项，自动滑动
     loop : false,
@@ -479,7 +474,12 @@
     //type: 'fraction',
     //type : 'progressbar',
     //type : 'custom',
-  },})
+  },
+});
+  //如果只有一个slide就销毁swiper
+  //if(mySwiper.slides.length<=3){
+  //  mySwiper.destroy();
+  //}
   </script>
 </body>
 </html>
