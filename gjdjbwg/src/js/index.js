@@ -37,4 +37,5 @@ function tabCtrl(ele) {
 }
 tabCtrl('.news');
 
+
 })

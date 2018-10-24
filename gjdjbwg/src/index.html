@@ -51,7 +51,7 @@
             </div>
           </div>
         </li>
-        <!-- <li class="swiper-slide">
+         <li class="swiper-slide">
           <div class="wrap">
             <img src="img/banner1_bg.jpg" alt="">
             <div class="con">
@@ -59,9 +59,36 @@
               <div class="right"></div>
             </div>
           </div>
-        </li> -->
+        </li>
+        <li class="swiper-slide">
+            <div class="wrap ">
+              <img src="img/banner1_bg.jpg" alt="">
+              <div class="inner ">
+                <div class="con cf">
+                  <div class="left">
+                    <img src="img/banner_t1.png" alt="">
+                    <a href="#" class="read"><img src="img/more.png" alt=""></a>
+                  </div>
+                  <div class="right">
+                    <ol>
+                      <li>
+                        <img src="img/banner_i2.jpg" alt="">
+                        <a href="#" class="read"><img src="img/more.png" alt=""></a>
+                      </li>
+                      <li>
+                          <img src="img/banner_i22.jpg" alt="">
+                          <a href="#" class="read"><img src="img/more.png" alt=""></a>
+                        </li>
+                    </ol>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </li>
+          
       </ul>
-      <div class="swiper-pagination"><img src="img/fenye.png" alt=""></div>
+      <div class="swiper-pagination swiper-pagination1"></div>
+      <!-- <img src="img/fenye.png" alt=""> -->
     </div>
     <div class="bg">
         <div class="inner cang cf">
@@ -118,7 +145,7 @@
                       </div>
                   </li>
                 </ul>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination swiper-pagination2"></div>
               </div>
             </div>
           </div>
@@ -320,7 +347,7 @@
                   </li>
                   
               </ul>
-              <div class="swiper-pagination"></div>
+              <div class="swiper-pagination swiper-pagination3"></div>
             </div>
           </div>
           <div class="inner wc cf">
@@ -431,38 +458,36 @@
 <footer>
   <img src="img/logo_bottom.png" alt="">
 </footer>
+
 <script src="lib/jquery-3.2.1.min.js" type=""></script>
+<script src="lib/swiper-3.4.2.jquery.min.js" type=""></script>
 <script src="lib/swiper.min.js" type=""></script>
 <script src="js/index.js" type=""></script>
 <script>
- var mySwiper = new Swiper('.swiper-container1', {
-    autoplay: false,//可选选项，自动滑动
-    loop : false,
+var swiper = new Swiper('.swiper-container1', {
   pagination: {
-    el: '.swiper-pagination',
-    //type: 'bullets',
-    //type: 'fraction',
-    //type : 'progressbar',
-    type : 'custom',
+			el: '.swiper-pagination1',
+			clickable: true,
+      // type : 'custom',
+			renderBullet: function (index, className) {
+			switch(index){
+				case 0:text='一';break;
+				case 1:text='二';break;
+				case 2:text='三';break;
+				case 3:text='四';break;
+			}
+			return '<span class="' + className + '">' +'' + '</span>';
+			},
   },
-  renderCustom: function(swiper,current, total){
-        var paginationHtml = "";
-        for(var i= 0; i< total; i++) {
-         // 判断是不是激活焦点，是的话添加active类，不是就只添加基本样式类
-           if(i === (current -1)){
-              paginationHtml = '<span class="swiper-pagination-customs swiper-pagination-customs-activ"></span>';
-            }
-              paginationHtml = '<span class="swiper-pagination-customs"></span>';
-         }
-        return paginationHtml;
-     }     
-  });
- var mySwiper1 = new Swiper('.swiper-container2', {
+});
+
+var mySwiper1 = new Swiper('.swiper-container2', {
     autoplay: false,//可选选项，自动滑动
     loop : false,
     pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination2',
     type: 'bullets',
+    clickable :true,
     //type: 'fraction',
     //type : 'progressbar',
     //type : 'custom',
@@ -472,8 +497,9 @@
     autoplay: false,//可选选项，自动滑动
     loop : false,
     pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination3',
     type: 'bullets',
+    clickable :true,
     //type: 'fraction',
     //type : 'progressbar',
     //type : 'custom',

@@ -98,12 +98,13 @@ header .nav li:hover{
 }
 .banner .right li{
   margin-left:60px;
+  position: relative;
   margin-bottom:30px;
 }
 .banner .right .read{
   display:block;
-  position: relative;
-  bottom:120px;
+  position: absolute;
+  bottom:80px;
   left:40px;
 
 }
@@ -525,4 +526,22 @@ footer{
 }
 footer img{
   margin-top:24px;
+}
+/*banner的重置*/
+.swiper-container1 .swiper-pagination-bullet{
+  border-radius: 0;
+  width:22px;
+  height:22px;
+  opacity:1;
+  background:url(../img/a.png)no-repeat;
+}
+.swiper-container1 .swiper-pagination-bullet-active{
+  
+  background:url(../img/ac.png)no-repeat;
+  box-shadow: none;
+}
+.swiper-container1 .swiper-pagination-bullets{
+  background:url(../img/z.png)no-repeat;
+  background-position: 50%;
+  bottom:33px;
 }
