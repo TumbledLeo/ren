@@ -1,0 +1,241 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+
+</head>
+
+<body>
+<header>
+  <span class="back" onClick=""></span>
+  <h2>确认订单</h2>
+</header>
+
+<section class="bookbox orderbox">
+	<div class="booktit"><span>国家大剧院参观票</span></div>
+	<div class="bookcont ordercont">
+    	
+       <ul class="orderinfo">
+       
+       	<li>参观时段：5月1日-5月11日</li>
+        <li>参观票单价：¥40（普通票）</li>
+        <li>参观票张数：3</li>
+        <li>订单合计金额：<font color="#ff5158">¥120</font></li>
+       </ul>
+      
+    </div>
+
+</section>
+
+<form>
+<section class="bookbox orderbox">
+	<div class="booktit"><span>取票信息</span></div>
+	<div class="bookcont ordercont">
+    	
+       <ul class="orderinfo">
+       	<li class="checkcss">
+        <label class="ck"><input type="radio" checked></label>
+        
+         柜台取票</li>
+        <li>姓　名 <input class="suopiao" type="text" value="张三"></li>
+        <li>手机号 <input class="suopiao" type="text" value="13585555555"></li>
+       </ul>
+   	  <div class="bookread" style="margin-top:25px;margin-bottom:25px;">自取地址：北京市西城区西长安街2号 国家大剧院北门售票厅东侧票台<br>
+取票时间：每日09:30-16:30</div>
+   	    </div>
+
+</section>
+
+
+<section class="jifen">无可用积分规则</section>
+
+
+
+<section class="bookbox orderbox">
+	<div class="booktit"><span>开发票</span><label ><input type="checkbox" checked></label></div>
+	<div class="bookcont ordercont" id="fp" style="display:none">
+    	
+       <ul class="orderinfo">
+       	<li>发票信息<span style="float:right;" class="checkcss">  <label class="ck"><input type="radio" name="fapiao" checked></label> 个人 <label><input name="fapiao" type="radio" ></label> 公司</span></li>
+        <li>发票抬头<span style="float:right;"><input class="suopiao" placeholder="最少4个字" style="width:392px;" type="text" value=""></span></li>
+       </ul>
+      <div class="bookread" style="margin-top:20px; text-align:right;">发票内容：票款，不可更改。</div>
+    </div>
+
+</section>
+
+<div class="floatbtn" id="formsub">
+<section class="formsub btnf" >
+	<button>提交订单</button>
+</section>
+</div>
+
+
+</form>
+
+
+
+
+
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.5.1.js"></script>
+<script src="js/lyz.calendar.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	
+	
+	$(window).scroll(function() {
+		
+					
+					
+					 if( $("body").scrollTop()>430){
+						 
+						 $("#formsub section").removeClass("btnf");
+						
+					 }else{
+						 $("#formsub section").addClass("btnf");
+					}
+	});
+
+	$(".bookcheck a").click(function(){
+		$(this).parent().find("a").removeClass("active");
+		
+		$(this).addClass("active");
+		
+	})
+	
+	
+	$(".jia").click(function(){
+		var jia=parseInt($("#number").val())+1;
+		if(jia<=20){
+			
+			if(jia==20){
+				$(".jia").addClass("jia2");
+			}
+			$("#number").val(jia);
+			
+		}
+		
+		$(".jian").addClass("jian2");
+		
+	})
+	
+	$(".jian").click(function(){
+		
+		
+		var jian=parseInt($("#number").val())-1;
+		if(jian>=1){
+			if(jian==1){
+				$(".jian").removeClass("jian2");	
+			}
+				
+			
+			$("#number").val(jian);
+		}
+		
+	})
+	
+	$(".checkcss label").click(function(){
+		$(".checkcss label").parent().find("label").removeClass("ck");
+		
+		$(this).addClass("ck");
+	})
+	
+	$(".booktit label").toggle(function(){
+		
+		
+		$(this).addClass("ck");
+		$("#fp").slideDown();
+	},function(){
+		
+		$(this).removeClass("ck");
+		$("#fp").slideUp();
+		
+		})
+	
+	
+	
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+<script src="dist/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper1 = new Swiper('.swiper1', {
+    pagination: '.swiper-pagination1',
+    paginationClickable: true,
+    spaceBetween: 0,
+	loop : true,
+});
+
+ var swiper3 = new Swiper('.swiper3', {
+        pagination: '.swiper-pagination3',
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	var swiper_t1 = new Swiper('.swiper_t1', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t2 = new Swiper('.swiper_t2', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t3 = new Swiper('.swiper_t3', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t4 = new Swiper('.swiper_t4', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	
+	
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,572 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<header>
+  <span class="menu" onClick="navshow()"></span>
+  <span class="search"></span>
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:left;">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+
+
+
+<section class="choirbox" style=" background-color:#000; background-image:none;">
+	<div class="chtit"><img src="images/gxyt.png"  alt=""/></div>
+    <div class="cmenu">
+    	<div class="cmenucont">
+        	<div class="cmenulist phi">
+            	<ul>
+                	<li><a href="#">关于乐团</a></li>
+                    <li><a href="#">乐季推荐</a></li>
+                    <li><a href="#">演出安排</a></li>
+                    <li><a href="#">驻院艺术家</a></li>
+                    <li><a href="#">客座艺术家</a></li>
+                    <li><a href="#">演出实况</a></li>
+                    <li><a href="#">乐团历程</a></li>
+                </ul>
+            </div>
+    	<div class="chctrol" id="chctrol" ></div>
+        </div>
+    </div>
+    <div class="opera_tit" style="background-color:transparent"><h1>关于乐团</h1>
+    </div>
+  <div class="ch_cont" id="ch_cont" style="height:240px; overflow:hidden;">
+    <p>　　国家大剧院管弦乐团是中国国家表演艺术中心的常驻乐团。</p>
+    <p>　　新世纪的北京，历史气度和当代活力彼此交织，也滋育了国家大剧院管弦乐团远大的音乐精神和视界。自2010年3月建立以来，他们凭着对音乐与生俱来的热情、专注和创新精神，已位列中国乐坛最优秀的交响劲旅，并迅速得到了国际乐界的热切关注。</p>
+　　伴随他们一起经历这个过程的，有诸多优秀的音乐大师，包括：指挥家洛林•马泽尔、祖宾•梅塔、克里斯托弗•艾森巴赫、瓦莱里•捷杰耶夫、法比奥•路易斯、郑明勋、弗拉基米尔•阿什肯那齐、列夫•赛格斯坦、根特•赫比希、吕绍嘉、汤沐海、张弦、谭利华、张国勇等，钢琴家鲁道夫•布赫宾德、郎朗、史蒂芬•科瓦塞维奇、卡蒂雅•布尼亚季什维莉、王羽佳、陈萨等，大提琴家戈蒂耶•卡普松、王健等，小提琴家瓦汀•列宾、吕思清、宁峰等，小号家艾莉森•巴尔松，单簧管演奏家萨宾•梅耶，打击乐演奏家李飚，歌唱家普拉西多•多明戈、里奥•努奇、李晓良、和慧、沈洋等。马泽尔曾评价他们“富有激情，全心投入，实力非同一般”，艾森巴赫则认为他们已是“亚洲最优秀乐团之一”。<br>
+　　凭藉在歌剧和交响乐领域同样的优秀表现和丰富经验，他们已作为中国最优秀的两栖乐团而名闻海内外。在歌剧领域，他们以精彩的演绎创造了中国歌剧音乐的全新艺术境界，也令国家大剧院众多世界级的歌剧制作更加熠熠生辉。多年来，他们精彩呈现了三十余部国家大剧院歌剧制作，既包括《罗恩格林》、《漂泊的荷兰人》、《阿依达》、《奥涅金》、《奥赛罗》、《纳布科》、《托斯卡》、《图兰朵》、《费加罗的婚礼》等世界经典歌剧，也包括《骆驼祥子》、《赵氏孤儿》、《冰山上的来客》等中国原创歌剧。在交响乐领域，他们不仅以跨越整年的乐季策划呈现了精彩的节目编排，而且以特有的活力与创意为所有观众留下了深刻的印象。在吕嘉带领下于2013年开启的全套贝多芬之旅中，他们展示出了对德奥古典作品的深厚偏爱和高超素养。在马泽尔指挥下演绎的瓦格纳名作《无词指环》被马泽尔认为“作品诞生以来最完美的演绎”，而该音乐会的现场录音也由索尼古典进行全球发行，并成为马泽尔与中国乐团唯一公开发行的唱片。心怀对当代音乐的巨大热情，他们相继上演约翰•亚当斯、吉雅•坎切利、武满彻等当代作曲家的作品，并陆续委约和全球首演了十余位顶尖作曲家（奥古斯塔•里德•托马斯、卡列维•阿霍、鲁多维科•艾奥迪、瑞切尔•波特曼、赵季平等）的新作，更通过国家大剧院‘青年作曲家计划’积极推动中国新一代作曲家的成长。<br>
+　　作为极具时代精神的音乐使者，他们通过周末音乐会、艺术沙龙和在学校、社区、医院、博物馆等开设的室内乐活动，将无数观众带入美妙的音乐世界，更作为国家的文化使者将当代中国的艺术活力传播到海外。2012至2015年，他们先后与艾森巴赫参加了德国石荷州、基辛根等音乐节，与陈佐湟在柏林、纽伦堡和悉尼上演音乐会，与吕嘉赴新加坡、首尔、大邱、台北和澳门举行亚洲巡演。2014年吕嘉率领的芝加哥、纽约、华盛顿、蒙特利尔等七大城市的北美巡演，堪称中国乐团在国际乐界的新突破，以其“欢欣愉悦的自信和朝气蓬勃的力量”（Musical America）被评论家们赞誉为“一支光彩四射和一流水准的乐团”（ConcertoNet.com）。<br>
+　　在以“弦外有声”为主题的2016/17乐季中，乐团将上演《唐豪瑟》、《水仙女》、《战争与和平》等十五部歌剧制作，并将在吕嘉及郑明勋、吕绍嘉、克劳斯•彼得•弗洛、帕沃•柯岗、哈努•林图、汤沐海、张艺、李飚等指挥家带领下，与郑京和、戈蒂耶•卡普松、海宁•科瑞格鲁德、王健、吴蛮、张昊辰、陈萨、秦立巍、杨天娲、宁峰、吴巍等独奏家合作，带来三十多场精彩的音乐会。同时，陈其钢与王羽佳将作为国家大剧院2016/17驻院艺术家，与乐团展开从音乐会到教育项目的广泛合作。 国家大剧院音乐艺术总监陈佐湟，是国家大剧院管弦乐团的创建者之一，也是乐团首任首席指挥。2012年，陈佐湟荣膺桂冠指挥，吕嘉出任首席指挥，并由袁丁担任助理指挥。吕嘉在交响作品和歌剧领域均造诣深厚，曾任意大利维罗纳歌剧院音乐艺术总监、西班牙特内里费交响乐团音乐总监，同时也是中国澳门乐团现任艺术总监。</div>
+	<div class="down" id="down"></div>
+	<div align="right"><img src="images/img00992.jpg" width="750" height="437"  alt=""/></div>
+    
+     <div class="opera_tit" style="background-color:transparent"><h1>指挥</h1></div>
+    
+    
+    <div class="hxmbox">
+    	
+        <div class="abcontss" id="abcontss"><img src="images/img091.jpg" width="248" height="250" style="float:left;"  alt=""/><h1><span></span>首席指挥：吕嘉</h1><p>　　国家大剧院音乐艺术总监、国家大剧院管弦乐团音乐总监与首席指挥，同时兼任澳门乐团音乐总监，曾任意大利维罗那歌剧院音乐总监及西班牙桑塔•克鲁兹•特内里费交响乐团艺术总监。
+</p>
+<p>　　吕嘉曾先后在欧美指挥歌剧及音乐会近两千场，合作过的世界知名歌剧院及交响乐团包括斯卡拉歌剧院、柏林德意志歌剧院、皇家阿姆斯特丹音乐厅管弦乐团、芝加哥交响乐团、莱比锡布商大厦管弦乐团、慕尼黑爱乐乐团、班贝格交响乐团、罗马圣塞西莉亚交响乐团、伯明翰城市交响乐团、利物浦皇家爱乐乐团、里昂国立管弦乐团等。</p>
+<p>　　歌剧在吕嘉的指挥生涯中占据着特殊位置，曾指挥歌剧剧目五十余部。作为第一位在意大利国家歌剧院担任总监的亚裔指挥家，他被意大利的音乐评论誉为“比意大利人更懂得意大利歌剧的指挥家”。1989年获安东尼奥•普兰佩得罗第国际指挥大赛第一名。1998年他指挥的歌剧《茶花女》被马切拉塔歌剧节评为最佳诠释。2007年意大利总统纳波利塔诺为他颁发“总统杯”；同年，他在罗西尼歌剧节里指挥的《贼鹊》被评为当年“最佳歌剧”。</p></div>
+
+		<div class="clear"></div>
+        <div class="down" id="down2"></div>
+    </div>
+    
+    
+    
+    <div class="hxmbox2">
+    
+    	 <div class="abcontss" id="abcontss2"><img src="images/img003.jpg" width="248" height="250" style="float:left;"  alt=""/><h1><span></span>首席指挥：陈佐湟</h1><p>　　陈佐湟毕业于北京中央音乐学院，经小泽征尔先生推荐赴美国坦格乌德音乐中心及密西根大学音乐学院学习，获音乐硕士学位。其后，获密西根大学有史以来颁发的第一个乐队指挥音乐艺术博士学位，成为中华人民共和国第一位音乐艺术博士。
+</p>
+<p>　　1987年，陈佐湟任中央乐团指挥，并带领乐团作为第一支中国的交响乐团在美国纽约、芝加哥、华盛顿、旧金山、洛杉矶等24个城市成功地进行了访问演出。此后，陈又曾带领中央乐团、中国交响乐团、上海爱乐乐团及布达佩斯爱乐乐团、韩国仁川爱乐乐团等，在欧洲、美洲和亚洲各国进行了20次国际巡演。陈佐湟曾应邀赴欧洲、亚洲、北美洲及美洲数十个国家及地区担任当地交响乐团客席指挥，亦曾多次应邀担任国际音乐比赛评委。</p>
+<p>　　自20世纪80年代始，陈佐湟曾出任中央乐团交响乐队指挥、美国威切塔交响乐团音乐总监、美国罗得岛州爱乐乐团音乐总监。1996年，陈佐湟参加了中国交响乐团组建，并出任首任艺术总监。陈佐湟还担任过墨西哥OFUNAM乐团音乐总监、上海爱乐乐团艺术总监、韩国仁川爱乐乐团音乐总监、中国国家大剧院管弦乐团首席指挥及贵阳交响乐团艺术指导。</p>
+<p>陈佐湟自2007年始担任中国国家大剧院音乐艺术总监。</p></div>
+   	
+		<div class="clear"></div>
+        <div class="down" id="down3"></div>
+    </div>
+    
+    
+    <div class="hxmbox">
+    	<div class="abcontss" id="abcontss3"><img src="images/img004.jpg" width="248" height="250" style="float:left;"  alt=""/><h1><span></span>助理指挥：袁丁</h1><p>　　袁丁,著名青年指挥家,国家大剧院管弦乐团助理指挥</p>
+<p>　　作为一名卓越的青年指挥家，袁丁近年来成功指挥过莱比锡中德广播交响乐团、南威斯特法伦爱乐乐团、莱比锡喜歌剧院乐团、西萨克森州交响乐团、耶拿爱乐乐团、莱比锡音乐与戏剧大学交响乐团与合唱团、韩国国家歌剧院、澳门乐团、中国国家交响乐团、中国国家大剧院管弦乐团、北京交响乐团、中央芭蕾舞团交响乐团、深圳交响乐团、杭州爱乐乐团、上海歌剧院、贵阳交响乐团等，并与德国Eutin歌剧艺术节、澳门国际音乐节保持着长期合作。</p>
+<p>　　在拥有广泛的交响乐保留曲目的同时，袁丁在歌剧领域也有骄人的成绩：通过不断探索，袁丁快速掌握了意大利语及德语剧目的精髓，至今已排演了近40部歌剧保留剧目，成为同龄歌剧指挥家中的佼佼者。尤其值得一提的是在2015年国家大剧院歌剧节系列演出中，在最后一刻顶替身体不适的吕嘉先生，临危受命登台指挥了莫扎特四幕歌剧《费加罗的婚礼》，取得了轰动性的成功。</p>
+<p>　　袁丁曾以优异成绩分别毕业于北京中央音乐学院和德国莱比锡音乐与戏剧大学，期间跟随著名音乐教育家徐新教授、著名指挥家李心草先生和德国指挥家乌尔里希•温德福尔教授研习指挥艺术，此外，还与小泽征尔、克里斯多夫•艾申巴赫、洛林•马泽尔、祖宾•梅塔等多位世界级指挥大师有过成功且愉快的合作。</p></div>
+    
+    
+    	
+		<div class="clear"></div>
+      <div class="down" id="down4"></div>
+    </div>
+    
+    
+    
+</section>
+
+<section class="choirbox2" style=" background-color:#000; background-image:none;">
+	 <div class="hxmbox2" style="margin-top:0px;">
+		<div class="opera_tit" style="background-color:transparent"><h1>音乐家</h1></div>
+     </div>
+     
+     <div class="tuli">
+     	<span style="width:156px;"><i></i>首席</span>  <span style="width:180px;"><i style="background-color:#c7992b;"></i>客座首席</span>  <span style="width:190px;"><i style="background-color:#0f5a04;"></i>代理首席</span> <span><i style="background-color:#0f7fc4;"></i>副首席</span> 
+     </div>
+     
+     <div class="glist">
+     	<div class="tit">乐团首席 <span>乐团首席按姓氏笔画排序</span></div>
+        
+        <ul>
+        	<li><img class="lazy" src="philharmonic/a01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/a02.jpg" width="176" height="233"  alt=""/></li>
+        </ul>
+    
+        
+        <div class="tit">第一小提琴 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/b01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b04.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b05.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b06.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b07.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b08.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b09.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b10.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b11.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b12.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b13.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/b14.jpg" width="176" height="233"  alt=""/></li>
+        </ul>
+        
+        <div class="tit">第二小提琴 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/c01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c04.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c05.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c06.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c07.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c08.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c09.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c10.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c11.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c12.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c13.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c14.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/c15.jpg" width="176" height="233"  alt=""/></li>
+        </ul>
+        
+         <div class="tit">中提琴 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/d01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d04.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d05.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d06.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d07.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d08.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d09.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d10.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d11.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/d12.jpg" width="176" height="233"  alt=""/></li>
+        </ul>
+        
+        <div class="tit">大提琴 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/e01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/e02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/e03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/e04.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/e05.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/e06.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/e07.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/e08.jpg" width="176" height="233"  alt=""/></li>
+        </ul>
+        
+        <div class="tit">低音提琴 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/f01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/f02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/f03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/f04.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/f05.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/f06.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/f07.jpg" width="176" height="233"  alt=""/></li>
+            
+        </ul>
+        
+        <div class="tit">长 笛 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/g01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/g02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/g03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/g04.jpg" width="176" height="233"  alt=""/></li>            
+        </ul>
+        
+         <div class="tit">双簧管 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/h01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/h02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/h03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/h04.jpg" width="176" height="233"  alt=""/></li>            
+        </ul>
+        
+         <div class="tit">单簧管 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/i01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/i02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/i03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/i04.jpg" width="176" height="233"  alt=""/></li>            
+        </ul>
+        
+        <div class="tit">大 管 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/j01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/j02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/j03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/j04.jpg" width="176" height="233"  alt=""/></li>            
+        </ul>
+        
+         <div class="tit">圆 号 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/k01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/k02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/k03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/k04.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/k05.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/k06.jpg" width="176" height="233"  alt=""/></li>         
+        </ul>
+        
+         <div class="tit">小 号 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/l01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/l02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/l03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/l04.jpg" width="176" height="233"  alt=""/></li>     
+        </ul>
+        
+         <div class="tit">长 号 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/m01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/m02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/m03.jpg" width="176" height="233"  alt=""/></li>
+        </ul>
+        
+        <div class="tit">大 号 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/n01.jpg" width="176" height="233"  alt=""/></li>
+        </ul>
+        
+        <div class="tit">定音鼓 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/o01.jpg" width="176" height="233"  alt=""/></li>
+        </ul>
+        
+        <div class="tit">打击乐 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/p01.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/p02.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/p03.jpg" width="176" height="233"  alt=""/></li>
+            <li><img class="lazy" src="philharmonic/p04.jpg" width="176" height="233"  alt=""/></li>     
+        </ul>
+        
+        <div class="tit">竖 琴 </div>
+         <ul>
+        	<li><img class="lazy" src="philharmonic/q01.jpg" width="176" height="233"  alt=""/></li>
+        </ul>
+        
+        
+     </div>
+     
+     
+
+  <div class="hxmbox2" style="margin-top:0px;">
+    	<div class="opera_tit" style="background-color:transparent"><h1>行政团队</h1></div>
+        <div class="hxcos">
+        <P>
+        董事长：陈戈<br>
+          团长：黄小曼<br>
+          指挥：吴灵芬<br>
+          副团长：廖屹<br>
+          合唱声乐指导：王蕾<br>
+          团长助理：潘崑<br>
+          助理指挥：焦淼<br>
+          钢琴伴奏：李大威 曲媛 隋博睿 聂辰<br>
+          行政管理：方圆 李大鹏 陈姝玥<br>
+          乐务：钱文江 孙泽辉<br>
+     谱务：于进</P></div>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+  <div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.5.1.js"></script>
+
+<script>
+$(function(){
+	
+	$(".tab li").mouseover(function(){
+		$(".tab li").find("span").removeClass("active");
+		$(this).find("span").addClass("active");
+		$("#tb1,#tb2,#tb3,#tb4").hide();
+		$("#"+$(this).attr("rel")).show();
+		
+	})
+	
+
+	
+	$(".calencont ul li p:last-child").click(function(){
+		$(".calencont li p:last-child").removeClass("active");
+		$(this).addClass("active");		
+	})
+	
+	$(".calencont li[id!='hasactiv']").click(function(){			
+			$("#activ3").removeClass("minheight");
+			$("#activ3").hide();
+			
+			$("#activ3").height(438);
+			$("#activ3").slideUp();
+			$("#activ4").slideDown();
+	})
+	$("#hasactiv").click(function(){
+			$("#activ3").hide();
+			$("#activ4").hide();
+			$("#activ3").height(438);
+			$("#activ3").slideDown();
+	})
+	$(".scattr select").change(function(){
+		
+		$(this).parent().find("font").text($(this).val());	
+		
+	})
+
+
+	$("#down").click(function(){
+			
+			if($("#down").hasClass("act1802")){
+				$("#down").removeClass("act1802");
+				$("#ch_cont").animate({height:"240px"},300);
+				
+			}else{
+				$("#down").addClass("act1802");
+				$("#ch_cont").animate({height:"2560px"},300);
+			}	
+			
+			
+	})
+	
+	$("#down2").click(function(){
+			
+			if($("#down2").hasClass("act180")){
+				$("#down2").removeClass("act180");
+				$("#abcontss").animate({height:"250px"},300);
+				
+			}else{
+				$("#down2").addClass("act180");
+				$("#abcontss").animate({height:"910px"},300);
+			}	
+			
+			
+	})
+	$("#down3").click(function(){
+			
+			if($("#down3").hasClass("act180")){
+				$("#down3").removeClass("act180");
+				$("#abcontss2").animate({height:"250px"},300);
+				
+			}else{
+				$("#down3").addClass("act180");
+				$("#abcontss2").animate({height:"950px"},300);
+			}	
+			
+			
+	})
+	$("#down4").click(function(){
+			
+			if($("#down4").hasClass("act180")){
+				$("#down4").removeClass("act180");
+				$("#abcontss3").animate({height:"250px"},300);
+				
+			}else{
+				$("#down4").addClass("act180");
+				$("#abcontss3").animate({height:"1050px"},300);
+			}	
+			
+			
+	})
+	
+	$("#chctrol").click(function(){
+			
+			if($("#chctrol").hasClass("act1802")){
+				$("#chctrol").removeClass("act1802");
+				$(".cmenulist").slideUp(function(){
+					$(".chtit").css("backgroundColor","transparent");	
+				});
+				
+			}else{
+				$("#chctrol").addClass("act1802");
+				$(".cmenulist").slideDown();
+				$(".chtit").css("backgroundColor","#000");
+			}	
+			
+			
+	})
+	
+
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+<script src="dist/js/swiper.min.js"></script>
+
+
+<script src="js/jquery.lazyload.js"></script>
+<script>
+$(function() {
+    $("img.lazy").lazyload({
+        event : "sporty"
+    });
+});
+$(window).bind("load", function() {
+    var timeout = setTimeout(function() { $("img.lazy").trigger("sporty") }, 1000);
+});  
+</script>
+</body>
+</html>

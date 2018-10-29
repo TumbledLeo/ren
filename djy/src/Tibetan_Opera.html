@@ -1,0 +1,1086 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+
+
+<link href="css/lyz.calendar.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header style="z-index:99999999">
+  <span class="menu" onClick="navshow()"></span>
+  <span class="search"></span>
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:left;">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+<div id="waibox">
+<div style="position: relative; top:0px; z-index:999; width:750px;" id="floatbox" >
+<div style=" background-color:#fff;padding-top:30px;; " id="catbox">
+<section class="searchbox" style="margin-top:0px; " >
+	<input type="text" class="scinptu" placeholder="关键字" /><input type="button" class="scbtn" />
+</section>
+<section class="scattr" style="height:180px;">
+	<div class="scleft">
+    <p><span>创作年份</span><b class="select" style=" width:208px;"><font>全部</font><select><option>全部</option><option>2017</option><option>2016</option><option>2015 </option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option><option>2009</option><option>2008</option></select></b></p>
+    <p><span>创作方式</span><b class="select" style=" width:208px;"><font>全部</font><select><option>全部</option><option>大剧院制作</option><option>原创剧目</option><option>联合制作 </option></select></b></p>
+   
+    </div>
+    <div class="scright">
+    <p><span>艺术门类</span><b class="select" style=" width:208px;"><font>全部</font><select><option>全部</option><option>歌剧</option><option>话剧</option><option>京剧</option><option>舞蹈</option><option>音乐戏剧</option><option>中国题材</option><option>其它</option></select></b></p>   
+    </div>
+</section>
+</div>
+<section class="upbtn actv" id="upbtn"></section>
+</div>
+</div>
+
+<section class="timeline">
+  <div class="year">2016</div>
+  <div class="yearbox" style="height:3250px">
+    	<div class="line"></div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+    </div>
+	<div class="line_time" style="height:78px;"><img src="images/line_1.jpg" width="4" height="79"  alt=""/></div>
+  <div class="year">2015</div>
+  <div class="yearbox" style="display:none;">
+    	<div class="line"></div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+    </div>
+
+<div class="line_time" style="height:78px;"><img src="images/line_2.jpg" width="4" height="79"  alt=""/></div>
+<div class="year">2014</div>
+  <div class="yearbox" style="display:none;">
+    	<div class="line"></div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+		<div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+    </div>
+
+<div class="line_time" style="height:78px;"><img src="images/line_3.jpg" width="4" height="79"  alt=""/></div>
+<div class="year">2013</div>
+  <div class="yearbox" style="display:none;">
+    	<div class="line"></div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+    </div>
+<div class="line_time" style="height:78px;"><img src="images/line_4.jpg" width="4" height="79"  alt=""/></div>
+<div class="year">2012</div>
+  <div class="yearbox" style="display:none;">
+    	<div class="line"></div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+    </div>
+
+<div class="line_time" style="height:78px;"><img src="images/line_5.jpg" width="4" height="79"  alt=""/></div>
+<div class="year">2011</div>
+  <div class="yearbox" style="display:none;">
+    	<div class="line"></div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+    </div>
+<div class="line_time" style="height:78px;"><img src="images/line_6.jpg" width="4" height="79"  alt=""/></div>
+<div class="year">2010</div>
+  <div class="yearbox" style="display:none;">
+    	<div class="line"></div>
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+    </div>
+<div class="line_time" style="height:78px;"><img src="images/line_7.jpg" width="4" height="79"  alt=""/></div>
+<div class="year">2009</div>
+  <div class="yearbox" style=" display:none;">
+    	<div class="line"></div>
+       <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+         <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        <div class="item">
+        	<div class="jt"></div><div class="jt2"></div>
+   	  		<div class="itemimg"><img src="images/lew.jpg" width="282" height="358"  alt=""/></div>
+            <div class="itemtit">
+            	<h1>话剧《李尔王》</h1>
+            	<span>2017/01/21</span>
+             
+            
+            </div>      
+     	</div>
+        
+        
+        
+        
+    </div>
+	<div class="line_time" style="height:78px;"><img src="images/line_8.jpg" width="4" height="79"  alt=""/></div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.5.1.js"></script>
+
+<script>
+$(function(){
+	
+	//yearbox
+	
+	$(".yearbox").each(function(){
+		var toph=650;
+	
+		$(this).height($(this).find("div.item").size()*650);		
+		$(this).find("div.item:even").addClass("iteml");
+		$(this).find("div.item:odd").addClass("itemr");		
+		for(var i=0;i<=$(this).find("div.item").size();i++){
+			(i%2 ==0) ?$(this).find("div.item").eq(i).css("top",toph*i/2+"px"):$(this).find("div.item").eq(i).css("top",(toph*(i-1)/2+70)+"px");
+		}
+		
+		
+	});
+		
+
+	
+	$(".calencont li[id!='hasactiv']").click(function(){			
+			$("#activ3").removeClass("minheight");
+			$("#activ3").hide();
+			
+			$("#activ3").height(438);
+			$("#activ3").slideUp();
+			$("#activ4").slideDown();
+	})
+	$("#hasactiv").click(function(){
+			$("#activ3").hide();
+			$("#activ4").hide();
+			$("#activ3").height(438);
+			$("#activ3").slideDown();
+	})
+	$(".scattr select").change(function(){
+		
+		$(this).parent().find("font").text($(this).val());	
+		
+	})
+
+	$(window).scroll(function () {
+		
+		
+		if($(window).scrollTop()>140){
+			
+			$("#floatbox").css({"position":"fixed","top":"0px"});
+			
+			
+		}else{
+			$("#floatbox").css({"position":"relative","top":"0px"});
+				
+		}
+		
+		
+	})
+
+
+	$(".upbtn").click(function(){
+		
+		$("#catbox").slideToggle(
+		function () {
+				
+		   		
+				
+				
+				if($("#upbtn").hasClass("actv")){
+				
+					$(".upbtn").removeClass("actv");
+				}else{
+
+					$(".upbtn").addClass("actv");
+					
+				}
+				
+		  }
+		
+		
+		);
+	
+	});
+	$(".year").click(function(){
+		$(this).next("div[class='yearbox']").toggle();
+
+	});
+
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+
+
+
+</body>
+</html>

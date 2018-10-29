@@ -1,0 +1,368 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+<style>
+.swiper-container {
+	width: 100%;
+	height: 860px;
+	margin: 0;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #a2a2a2;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    right: 24px;
+}
+#wrapper,#ctab1,#ctab2 {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	-ms-touch-action: none;
+	padding-bottom:2px;
+}
+
+#scroller {
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.minheight {height:0px}
+
+
+</style>
+
+</head>
+
+<body>
+<header>
+  <span class="back" onClick=""></span>
+  <h2>剧照列表</h2>
+</header>
+
+<section class="photolist">
+	<ul>
+    	<li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/zizhiju.jpg"   alt=""/></li>
+        <li><img src="images/bb01.jpg" alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+		<li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/zizhiju.jpg"   alt=""/></li>
+        <li><img src="images/bb01.jpg" alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+		<li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/zizhiju.jpg"   alt=""/></li>
+        <li><img src="images/bb01.jpg" alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+		<li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/zizhiju.jpg"   alt=""/></li>
+        <li><img src="images/bb01.jpg" alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/juzhao.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+        <li><img src="images/sliser05.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-02.jpg"   alt=""/></li>
+        <li><img src="images/juzhao-03.jpg"   alt=""/></li>
+    </ul>
+    <div class="clear"></div>
+</section>
+
+
+
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+
+    <!-- Demo styles -->
+    <style>
+
+    .swiper-container {
+        width: 750px;
+        height: 780px;
+        margin: 0px auto;
+		background-color:transparent;
+		
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+		background-color:transparent;
+		color:#fff;
+		position:relative;
+    }
+	.swiper-slide p{ display:block; position:absolute; left:0px; right:0px; top:644px; font-size:28px; line-height:50px; padding-left:25px; padding-right:25px; text-align:left; height:100px; padding-top:30px;}
+
+	.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    opacity: 0.5;
+    cursor: auto;
+    pointer-events: none;
+	
+	}
+	.swiper-pagination{
+		width: 100%;
+    text-align: center;
+    left: 0px;
+	top:10px;
+	color:#fff;
+	}
+	#flowphoto { position:fixed; top:0; bottom:0px; left:50%; margin-left:-375px; z-index:999; background-color:rgba(0,0,0,0.9); z-index:-1; opacity:0;}
+	.swiper-container { margin-top:180px;}
+	.swiper-slide p,.swiper-slide img { display:block;}
+    </style>
+
+
+<section class="slider" id="flowphoto">
+<div class="closex" style="top:190px;right:10px; z-index:99999999 "></div>
+<!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+            <div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+<div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+<div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+<div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+<div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+<div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+<div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+<div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+<div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+<div class="swiper-slide"><img src="images/sl00.jpg" width="750"   alt=""/><p>女高音歌唱家维涅拉·吉玛蒂耶娃、张立萍分饰剧中女主
+角露琪亚</p></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="dist/js/swiper.min.js"></script>
+    
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction'
+    });
+    </script>
+</section>
+
+
+
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.5.1.js"></script>
+
+<script>
+$(function(){
+	
+	
+	
+	$(".photolist li").each(function(){
+		if($(this).find("img").width()>$(this).find("img").height()){
+			$(this).find("img").height(238);
+			$(this).find("img").css("marginLeft","-"+($(this).find("img").width()-238)/2+"px");
+		}
+		if($(this).find("img").width()<$(this).find("img").height()){
+			$(this).find("img").width(238);
+			$(this).find("img").css("marginTop","-"+($(this).find("img").height()-238)/2+"px");
+		}
+	});
+	
+	
+	$(".tab li").mouseover(function(){
+		$(".tab li").find("span").removeClass("active");
+		$(this).find("span").addClass("active");
+		$("#tb1,#tb2,#tb3,#tb4").hide();
+		$("#"+$(this).attr("rel")).show();
+		
+	})
+	
+	
+	
+	$(".photolist img").click(function(){
+		$("#flowphoto").hide();
+		$("#flowphoto").css({"z-index":"999","opacity":"1"});
+		$("#flowphoto").fadeIn();
+	})
+	
+	$(".closex").click(function(){
+		//$("#flowphoto").css({"z-index":"-1","opacity":"0"});
+		$("#flowphoto").fadeOut();
+	})
+
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+<script src="dist/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper1 = new Swiper('.swiper1', {
+    pagination: '.swiper-pagination1',
+    paginationClickable: true,
+    spaceBetween: 0,
+	loop : true,
+});
+
+ var swiper3 = new Swiper('.swiper3', {
+        pagination: '.swiper-pagination3',
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	var swiper_t1 = new Swiper('.swiper_t1', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t2 = new Swiper('.swiper_t2', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t3 = new Swiper('.swiper_t3', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t4 = new Swiper('.swiper_t4', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	
+	
+</script>
+
+<script src="js/jquery.lazyload.js"></script>
+</body>
+</html>

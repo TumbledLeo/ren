@@ -1,0 +1,509 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+<style>
+.swiper-container {
+	width: 100%;
+	height: 860px;
+	margin: 0;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #a2a2a2;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    right: 24px;
+}
+#wrapper,#ctab1,#ctab2 {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	-ms-touch-action: none;
+	padding-bottom:2px;
+}
+
+#scroller {
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.minheight {height:0px}
+
+
+</style>
+<script type="text/javascript" src="js/iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#jlist', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+
+}
+
+</script>
+<link href="css/lyz.calendar.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="loaded()">
+<header>
+  <span class="menu" onClick="navshow()"></span>
+  <span class="search"></span>
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:left;">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+
+
+
+<section class="choirbox" style="background-image:url(images/bg5.jpg)">
+	<div class="chtit"><img src="images/gxyt.png"  alt=""/></div>
+    <div class="cmenu">
+    	<div class="cmenucont">
+        	<div class="cmenulist phi">
+            	<ul>
+                	<li><a href="#">关于乐团</a></li>
+                    <li><a href="#">乐季推荐</a></li>
+                    <li><a href="#">演出安排</a></li>
+                    <li><a href="#">驻院艺术家</a></li>
+                    <li><a href="#">客座艺术家</a></li>
+                    <li><a href="#">演出实况</a></li>
+                    <li><a href="#">乐团历程</a></li>
+                </ul>
+            </div>
+    	<div class="chctrol" id="chctrol" ></div>
+        </div>
+    </div>
+    <div class="opera_tit" style="background-color:transparent"><h1>驻院艺术家</h1></div>
+  
+	<div class="hxmbox" style="margin-top:40px;">
+    	<div class="leftimg"><img src="images/ysj001.jpg" width="248" height="250"  alt=""/></div>
+        <div class="righttxt"><h1>陈其钢 • 2017-2018</h1>
+        	<p>　　旅法作曲家。青年时期就读于中央音乐学院，师从罗忠镕。1984年赴法国深造，被音乐大师梅西安纳为关门弟子
+			</p>
+
+        
+      </div>
+		<div class="clear"></div>
+        <div class="hmcont" id="righttxt" style="height:800px;">
+        	<h2>相关演出</h2>
+            <p>
+            2017/03/16　《源》　　　　　为大型交响乐团而作
+            2017/02/30　《乱弹》　　　　为交响乐团而作
+            2016/04/30　《逝去的时光》　为大提琴与交响乐团而作
+            2015/07/30　《走西口》　　　为弦乐团而作
+            </p>
+            
+            <h2>艺术体验</h2>
+            <p>
+            2017/07/01　陈其钢：我的探索与突破<br>
+            2016/04/23　时代大潮下的音乐写作：从巴赫到陈其钢<br><br>
+
+
+            </p>
+            <p>
+            　　陈其钢近三十年间获奖无数，作品被世界各地广泛传播。1998年曾出任贝桑松国际作曲大赛的评委会主席。2001年管弦乐作品《五行》从全世界一千多部交响乐作品中脱颖而出，被选为英国BBC国际作曲“Master Prize”的五首作品之一。2003年EMI/VIRGIN唱片公司全球发行其作品专辑《蝶恋花》，被世界权威杂志《留声机》评为当时十佳古
+            </p>
+        
+        </div>
+        <div class="down" id="down2"></div>
+    </div>
+    
+    <div class="hxmbox" style="margin-top:2px;">
+    	<div class="leftimg"><img src="images/ysj002.jpg" width="248" height="250"  alt=""/></div>
+        <div class="righttxt"><h1>王羽佳 • 2017-2018</h1>
+        	<p>　　王羽佳（Yuja Wang）是一位出色的钢琴家，魅力十足，极具当代艺术气质。她技艺精湛，令人叹为观止，只能用“音乐家”来形容她。
+			</p>
+
+        
+      </div>
+		<div class="clear"></div>
+        <div class="hmcont" id="righttxt3" style="height:1500px;">
+        	<h2>相关演出</h2>
+            <p>
+            2017/01/07　　吕嘉与王羽佳演绎巴托克与德沃夏克<br>
+
+2016/11/18　　王羽佳与旧金山交响乐团音乐会<br>
+
+2016/09/02　　王羽佳钢琴独奏音乐会<br>
+
+2016/08/21　　印象与色彩——吕绍嘉与王羽佳演绎德彪<br>
+　　　　　　　西、拉威尔与巴托克<br>
+
+2016/08/18　　王羽佳邂逅马丁·格鲁宾格
+            </p>
+            
+            <h2>艺术体验</h2>
+            <p>
+           2017/07/01　　羽之彩：王羽佳的音乐派对<br><br>
+
+
+            </p>
+            <p>
+　　2007年，她与波士顿交响乐团合作，首次登台表演，实现个人生涯的突破，而当时她还是柯蒂斯音乐学院的一名学生。自那之后，她便引发了国际上的轰动，成为世界各大知名管弦乐团的“宠儿”，其中包括位于芝加哥、克利夫兰、洛杉矶、纽约、费城、旧金山以及华盛顿的知名乐团；同时还有伦敦交响乐团、巴黎管弦乐团、皇家大会堂管弦乐团、柏林和慕尼黑爱乐乐团、西班牙国家管弦乐团、圣切契里亚音乐学院、马林斯基歌剧院乐团、以色列和中国爱乐乐团、NHK交响乐团、墨尔本和悉尼交响乐团以及西蒙•玻利瓦交响乐团。王羽佳早期受到许多知名大师的栽培，其中就包括古斯塔沃•杜达美、迈可•提尔森•汤玛斯、夏尔•迪图瓦和以及已逝的克劳迪奥•阿巴多。如今，她是最受追捧的钢琴独奏家之一。在全球的演奏厅和节日活动上都能见到有她的身影。自2009年起，羽佳成为德意志留声机公司的专属的艺术家，至今已发布三张独奏专辑以及两张协奏曲专辑，并两次荣获格莱美奖提名。羽佳精湛的演奏技法与别致的演奏风格让人听得如痴如醉，目前她已经成为电视纪录片的主角，许多艺术、文化和时尚杂志也争相报道她的情况。羽佳1987年出生在北京，6岁起开始学习钢琴，相继在中央音乐学院、加拿大卡尔加里蒙特皇家音乐学院以及费城的柯蒂斯音乐学院求学。此外，她还是劳力士品牌大使和施坦威艺术家。
+            </p>
+        
+        </div>
+        <div class="down" id="down3"></div>
+    </div>
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.5.1.js"></script>
+<script src="js/lyz.calendar.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	
+	$(".tab li").mouseover(function(){
+		$(".tab li").find("span").removeClass("active");
+		$(this).find("span").addClass("active");
+		$("#tb1,#tb2,#tb3,#tb4").hide();
+		$("#"+$(this).attr("rel")).show();
+		
+	})
+	
+	//日历选项卡切换
+	$(".catab a").mouseover(function(){
+		$(".catab a").removeClass("active");
+		$(this).addClass("active");
+		$("#ctab1,#ctab2").hide();
+		$("#"+$(this).attr("rel")).fadeIn();
+		
+		
+	})
+	
+	$(".calencont ul li p:last-child").click(function(){
+		$(".calencont li p:last-child").removeClass("active");
+		$(this).addClass("active");		
+	})
+	
+	$(".calencont li[id!='hasactiv']").click(function(){			
+			$("#activ3").removeClass("minheight");
+			$("#activ3").hide();
+			
+			$("#activ3").height(438);
+			$("#activ3").slideUp();
+			$("#activ4").slideDown();
+	})
+	$("#hasactiv").click(function(){
+			$("#activ3").hide();
+			$("#activ4").hide();
+			$("#activ3").height(438);
+			$("#activ3").slideDown();
+	})
+	$(".scattr select").change(function(){
+		
+		$(this).parent().find("font").text($(this).val());	
+		
+	})
+
+
+	$("#down").click(function(){
+			
+			if($("#down").hasClass("act1802")){
+				$("#down").removeClass("act1802");
+				$("#ch_cont").animate({height:"360px"},300);
+				
+			}else{
+				$("#down").addClass("act1802");
+				$("#ch_cont").animate({height:"660px"},300);
+			}	
+			
+			
+	})
+	
+	$("#down2").click(function(){
+			
+			if($("#down2").hasClass("act180")){
+				$("#down2").removeClass("act180");
+				$("#righttxt").slideUp();
+				
+			}else{
+				$("#down2").addClass("act180");
+				
+				$("#righttxt").slideDown();
+			}	
+			
+			
+	})
+	$("#down3").click(function(){
+			
+			if($("#down3").hasClass("act180")){
+				$("#down3").removeClass("act180");
+				$("#righttxt3").slideUp();
+				
+			}else{
+				$("#down3").addClass("act180");
+				
+				$("#righttxt3").slideDown();
+			}	
+			
+			
+	})
+	
+	$("#chctrol").click(function(){
+			
+			if($("#chctrol").hasClass("act1802")){
+				$("#chctrol").removeClass("act1802");
+				$(".cmenulist").slideUp(function(){
+					$(".chtit").css("backgroundColor","transparent");	
+				});
+				
+			}else{
+				$("#chctrol").addClass("act1802");
+				$(".cmenulist").slideDown();
+				$(".chtit").css("backgroundColor","#000");
+			}	
+			
+			
+	})
+	
+	
+	
+
+	
+	  $("#txtEndDate1").calendar();
+	  $("#txtEndDate2").calendar();
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+<script src="dist/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper1 = new Swiper('.swiper1', {
+    pagination: '.swiper-pagination1',
+    paginationClickable: true,
+    spaceBetween: 0,
+	loop : true,
+});
+
+ var swiper3 = new Swiper('.swiper3', {
+        pagination: '.swiper-pagination3',
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	var swiper_t1 = new Swiper('.swiper_t1', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t2 = new Swiper('.swiper_t2', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t3 = new Swiper('.swiper_t3', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t4 = new Swiper('.swiper_t4', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	
+	
+</script>
+
+
+</body>
+</html>

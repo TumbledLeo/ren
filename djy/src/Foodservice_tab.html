@@ -1,0 +1,470 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+<style>
+.swiper-container {
+	width: 100%;
+	height: 860px;
+	margin: 0;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #a2a2a2;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    right: 24px;
+}
+#wrapper,#ctab1,#ctab2 {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	-ms-touch-action: none;
+	padding-bottom:2px;
+}
+
+#scroller {
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.minheight {height:0px}
+
+
+</style>
+<script type="text/javascript" src="js/iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#tuijian', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+
+}
+
+</script>
+<link href="css/lyz.calendar.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="loaded()">
+<header>
+  <span class="menu" onClick="navshow()"></span>
+  <span class="search"></span>
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:left;">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+
+
+
+
+<section class="detail_tab2"><dd><a href="javascript:;"  class="active" rel="tab1">大剧院西餐厅</a></dd><dd><a href="javascript:;" rel="tab2">大剧院咖啡厅</a></dd></section>
+
+
+<div id="tab1">
+
+<section class="midbanner"><img src="images/banner05.jpg" width="750" height="339"  alt=""/></section>
+<section class="ctrol" id="ctrol">
+<a href="#">菜单下载</a><a href="javascript:$('#formbox').fadeIn(100);$('#ctrol').hide();">立即订餐</a>
+</section>
+
+<div style="background:#fff; display:none; padding-top:25px;  width:750px; z-index:9999" id="formbox">
+<section class="scattr"  style=" margin-top:0px; height:320px">
+	<div class="scleft">
+    <p><span>姓名</span><b class="select"  style=" background-image:none"><input type="text"  value="" placeholder="必填" style=" background-image:none" /></b></p>
+    <p><span>人数</span><b class="select"><font>必填</font><select><option>必填</option><option>1人</option><option>2人</option><option>3人</option><option>4人</option><option>5人</option></select></b></p>
+    <p style="width:700px;"><span>备注</span><b class="select" style="height:110px; width:620px; background-image:none">
+    	<textarea class="beizhutxt" placeholder="您对本次用餐有什么需求与期待？如需指定座位、音乐、酒水等。"></textarea>
+    
+    </b></p>
+    </div>
+    <div class="scright">
+    <p><span>手机</span><b class="select" style=" background-image:none"><input type="text"  value=""  placeholder="必填" style=" background-image:none" /></b></p>
+    <p><span>时间</span><b class="select"><font>午餐(11:30-14:00)</font><select><option>午餐(11:30-14:00)</option><option>午餐(11:30-14:00)</option></select></b></p>
+    
+    </div>
+</section>
+<section class="nots">每日21:00前可预定第二日的用餐，不支持提前多日订餐。</section>
+<section class="ctrol">
+<a href="#">立即订餐</a><a href="javascript:$('#formbox').fadeOut(100);$('#ctrol').show();">取消订餐</a>
+</section>
+</div>
+
+
+<section class="box">
+	<div class="boxtit">
+    	<b>主厨推荐</b>        
+    </div>
+    <div class="tuijian" id="tuijian">
+    	<ul style="width:1855px;">
+        	<li><img  src="images/tuij.jpg" width="290" height="290" onclick="showpic('images/datsrc.jpg','俄式土豆沙拉')"  alt=""/><p>俄式土豆沙拉</p></li>
+            <li><img src="images/tuij-02.jpg" width="290" height="290" onclick="showpic('images/datsrc.jpg','意大利蔬菜汤')"   alt=""/><p>意大利蔬菜汤</p></li>
+            <li><img src="images/tuij.jpg" width="290" height="290" onclick="showpic('images/datsrc.jpg','俄式土豆沙拉')"  alt=""/><p>俄式土豆沙拉</p></li>
+            <li><img src="images/tuij-02.jpg" width="290" height="290" onclick="showpic('images/datsrc.jpg','意大利蔬菜汤')"  alt=""/><p>意大利蔬菜汤</p></li>
+            <li><img src="images/tuij.jpg" width="290" height="290" onclick="showpic('images/datsrc.jpg','俄式土豆沙拉')"  alt=""/><p>俄式土豆沙拉</p></li>
+            <li><img src="images/tuij-02.jpg" width="290" height="290" onclick="showpic('images/datsrc.jpg','意大利蔬菜汤')"  alt=""/><p>意大利蔬菜汤</p></li>
+        </ul>
+    </div>
+
+</section>
+
+
+<section class="box">
+	<div class="boxtit">
+    	<b>酒会现场</b>        
+    </div>
+    <div class="jhxc">
+    <img src="images/jhxc.jpg" width="220" height="263" onclick="showpic('images/jhxc.jpg','')" alt=""/>
+    <img src="images/jhxc-02.jpg" width="220" height="263" onclick="showpic('images/jhxc-02.jpg','')" alt=""/> 
+    <img src="images/jhxc-03.jpg" width="220" height="263" onclick="showpic('images/jhxc-03.jpg','')" alt=""/> 
+    </div>
+
+</section>
+</div>
+<div id="tab2" style="display:none">
+
+
+<section class="box">
+	<div class="boxtit">
+    	<b>休闲美食</b>        
+    </div>
+    <div class="tuijian2" id="tuijian">
+    	<ul style="width:1855px;">
+        	<li><img src="images/tuij.jpg" width="290" height="290"  onclick="showpic('images/tuij.jpg','俄式土豆沙拉')"  alt=""/><p>俄式土豆沙拉</p></li>
+            <li><img src="images/tuij-02.jpg" width="290" height="290" onclick="showpic('images/tuij-02.jpg','意大利蔬菜汤')"  alt=""/><p>意大利蔬菜汤</p></li>
+            <li><img src="images/tuij.jpg" width="290" height="290" onclick="showpic('images/tuij.jpg','俄式土豆沙拉')"  alt=""/><p>俄式土豆沙拉</p></li>
+            <li><img src="images/tuij-02.jpg" width="290" height="290" onclick="showpic('images/tuij.jpg','意大利蔬菜汤')" alt=""/><p>意大利蔬菜汤</p></li>
+            <li><img src="images/tuij.jpg" width="290" height="290" onclick="showpic('images/tuij.jpg','俄式土豆沙拉')"  alt=""/><p>俄式土豆沙拉</p></li>
+            <li style="margin-right:0px;"><img src="images/tuij-02.jpg" width="290" height="290"  onclick="showpic('images/tuij.jpg','意大利蔬菜汤')" alt=""/><p>意大利蔬菜汤</p></li>
+        </ul>
+    </div>
+
+</section>
+
+
+<section class="box">
+	<div class="boxtit">
+    	<b>用餐环境</b>        
+    </div>
+    <div class="jhxc">
+    <img src="images/ychj.jpg"  width="220"  onclick="showpic('images/ychj.jpg','')" alt=""/><img src="images/ychj-02.jpg"  onclick="showpic('images/ychj-02.jpg','')"  width="220" alt=""/><img src="images/ychj-03.jpg"  onclick="showpic('images/ychj-03.jpg','')" width="220"  alt=""/> 
+    </div>
+
+</section>
+</div>
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+
+<div class="overlay"  style="background-color:#000;opacity: 1;" onClick="pichide()"></div>
+<div class="overimg">
+	<div class="closex" onClick="pichide()"></div>
+<img src="images/datsrc.jpg" width="704" />
+<p>意大利蔬菜汤</p>
+</div>
+
+<script src="js/jquery-1.5.1.js"></script>
+<script src="js/lyz.calendar.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	
+	//tab
+	
+	$(".detail_tab2 a").click(function(){
+		$(".detail_tab2 a").removeClass("active");
+		$(this).addClass("active");
+		$("#tab1,#tab2,#tab3,#tab4").hide();
+		$("#"+$(this).attr("rel")).show();
+		
+	})
+	
+	
+	$(".tab li").mouseover(function(){
+		$(".tab li").find("span").removeClass("active");
+		$(this).find("span").addClass("active");
+		$("#tb1,#tb2,#tb3,#tb4").hide();
+		$("#"+$(this).attr("rel")).show();		
+	})
+	
+	//日历选项卡切换
+	$(".catab a").mouseover(function(){
+		$(".catab a").removeClass("active");
+		$(this).addClass("active");
+		$("#ctab1,#ctab2").hide();
+		$("#"+$(this).attr("rel")).fadeIn();
+		
+		
+	})
+	
+	$(".calencont ul li p:last-child").click(function(){
+		$(".calencont li p:last-child").removeClass("active");
+		$(this).addClass("active");		
+	})
+	
+	$(".calencont li[id!='hasactiv']").click(function(){			
+			$("#activ3").removeClass("minheight");
+			$("#activ3").hide();
+			
+			$("#activ3").height(438);
+			$("#activ3").slideUp();
+			$("#activ4").slideDown();
+	})
+	$("#hasactiv").click(function(){
+			$("#activ3").hide();
+			$("#activ4").hide();
+			$("#activ3").height(438);
+			$("#activ3").slideDown();
+	})
+	$(".scattr select").change(function(){
+		
+		$(this).parent().find("font").text($(this).val());	
+		
+	})
+
+	
+	  $("#txtEndDate1").calendar();
+	  $("#txtEndDate2").calendar();
+	  
+	 //点击查看大图
+	 
+
+	  
+	  
+	
+})
+function showpic(imgsrc,tit){	
+	$(".overimg").find("img").attr("src",imgsrc);	
+	$(".overimg").find("p").text(tit);	
+	$(".overlay,.overimg").fadeIn();	
+}
+function pichide(){
+    $(".overlay,.overimg").fadeOut();	
+}
+
+
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+<script src="dist/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper1 = new Swiper('.swiper1', {
+    pagination: '.swiper-pagination1',
+    paginationClickable: true,
+    spaceBetween: 0,
+	loop : true,
+});
+
+ var swiper3 = new Swiper('.swiper3', {
+        pagination: '.swiper-pagination3',
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	var swiper_t1 = new Swiper('.swiper_t1', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t2 = new Swiper('.swiper_t2', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t3 = new Swiper('.swiper_t3', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t4 = new Swiper('.swiper_t4', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	
+	
+</script>
+
+
+</body>
+</html>

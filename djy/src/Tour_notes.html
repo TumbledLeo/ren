@@ -1,0 +1,483 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+  <span class="menu" onClick="navshow()"></span>
+  <span class="search"></span>
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:left;">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+
+<section class="banner"><img src="images/banner01.jpg" width="750" height="240"  alt=""/></section>
+
+<section class="detail_tab"><dd><a href="Tour_buy.html">参观购票</a></dd><dd><a href="Tour_notes.html" class="active">参观推荐</a></dd><dd><a href="Tour_guide.html" >参观导览</a></dd></section>
+
+
+<section class="Tour_notes ">
+ 	
+  <div class="tour_tit">选择参观时长</div>
+    
+  <div class="tour_list"><a href="javascript:;" class="active">1小时以内</a><a href="javascript:;">1-2小时</a><a href="javascript:;">2-3小时</a><a href="javascript:;">3小时以上</a></div> 
+   
+    
+  <div class="tour_tit"> 选择兴趣分类<font color="#666666">（可多选）</font></div>
+    
+    <div class="tour_list"><a href="javascript:;" class="active">免费讲解</a><a href="javascript:;">空间演出</a><a href="javascript:;">建筑*</a><a href="javascript:;">展览*</a></div> 
+    
+      
+  <div class="tour_read">
+    <p>*建筑包括：歌剧院、音乐厅、戏剧场</p>
+    <p>*展览包括：艺术沙龙、东展厅、现代艺术馆、西展厅、资料中心环廊</p>
+    </div>
+    
+  <div class="tour_btn"><a href="#">生成路线</a></div>
+    
+    
+    
+</section>
+
+
+<section class=" tour_cell">
+	<div class="tour_tj"><font>经典路线推荐</font>   <span id="droup"><i></i><b>全部收起</b></span></div>
+  <div class="tour_tips">
+    <p>可参观时长1-2小时</p>
+    <p>温馨提示：剧院内还有咖啡厅、西餐厅等休闲去处，欢迎光临。</p>
+    </div>
+  <div class="tour_dd">
+       <div class="tour_dd_tit">免费讲解</div>
+       <div class="tour_dd_cont">
+       		<ul>
+            	<li>
+                	<div class="ddlistit">免费讲解服务<i></i></div>
+                    <div>
+                      <p><img src="images/img009923.jpg" width="651" height="302"  alt=""/></p>
+                      <p class="pdd">　　为了方便您了解国家大剧院，我们为您提供中文免费
+定时讲解及收费的中英文讲解服务，讲解内容包括大剧院
+建筑和一个艺术展览。免费讲解服务时间：9:00-16:00。</p></div>
+ </li>
+            </ul>
+     </div>
+  </div>
+  
+  <div class="tour_dd">
+       <div class="tour_dd_tit">建筑</div>
+       <div class="tour_dd_cont">
+       		<ul>
+            	<li>
+               	  <div class="ddlistit">歌剧院<i></i></div>
+                    <div>
+                      <p><img src="images/img002212.jpg" width="651" height="302"  alt=""/></p>
+                      <p class="pdd">　　歌剧院是国家大剧院内最宏伟的建筑，以华丽辉煌的
+金色为主色调。主要上演歌剧、舞剧、芭蕾舞及大型文艺
+演出。共有观众席2207个（含站席）。</p></div>
+ </li>
+ 				<li>
+                	<div class="ddlistit">音乐厅<i></i></div>
+                    <div>
+                      <p><img src="images/img002212-02.jpg" width="651" height="302"  alt=""/></p>
+                      <p class="pdd">　　音乐厅洁白肃穆，色调风格宁静、清新而高雅，以演
+出大型交响乐、民族乐为主，兼顾其它形式的音乐演出。 
+观众席围绕在舞台四周，共有观众席1859个（含站席）。</p></div>
+ </li>
+ 
+ <li>
+                	<div class="ddlistit">戏剧场<i></i></div>
+                    <div>
+                      <p><img src="images/img002212-03.jpg" width="651" height="302"  alt=""/></p>
+                      <p class="pdd">　　戏剧场是国家大剧院最具民族特色的剧场，以中国红
+为主色调，真丝墙面烘托出传统热烈的气氛。主要上演话
+剧、歌剧、地方戏曲等演出。</p></div>
+ </li>
+ 
+
+            </ul>
+     </div>
+  </div>
+  
+  <div class="tour_dd">
+       <div class="tour_dd_tit">展览</div>
+       <div class="tour_dd_cont" style="padding-bottom:0px;" >
+       		<ul>
+            
+             <li>
+                	<div class="ddlistit">水下廊道西展览厅<i></i></div>
+                    <div>
+                      <p><img src="images/img002212-031.jpg" width="651" height="302"  alt=""/></p>
+                      <p class="pdd">　　在国家大剧院北水下长廊东西两侧各有一个面积达
+1200平方米的展览厅。在这里，“中国京剧艺术大展”、
+“古希腊戏剧展”悉数登场。</p></div>
+ </li>
+            
+            
+            	<li >
+                	<div class="ddlistit">大剧院艺术馆<i></i></div>
+                    <div>
+                      <p><img src="images/img002212-06.jpg" width="651" height="302"  alt=""/></p>
+                      <p class="pdd"  style="border:none ;padding-bottom:0px;">　　大剧院艺术馆是国家大剧院内面积最大的展馆，位于
+歌剧院屋顶平台南侧。这里介绍和回顾国家大剧院经营历
+程的常设展览，向您展现国家大剧院的成长印迹。</p></div>
+ </li>
+            </ul>
+     </div>
+  </div>
+  <div style="height:60px;"></div>
+
+</section>
+
+
+<section class="tour_bot">
+<p><img src="images/cgjs.jpg" width="750" height="31"  alt=""/></p>
+<p>您可立即通过官网购买参观票</p>
+<a href="#" class="tour_buy">立即订票</a>
+</section>
+
+<section class="box">
+	<div class="boxtit">
+    	<b>开放信息</b>
+       
+    </div>
+    <div class="downs" style="font-size:0px;"><img src="images/bdd.jpg" width="750"  alt=""/></div>
+</section>
+
+
+<div class="kfxxboxfix" >
+<div class="kfxxbox">
+<div class="kfxx">开放信息<img src="images/cloase.png" width="36" height="36" id="kfxxboxclose"  alt=""/></div>
+
+<table width="750" border="0" cellspacing="2" cellpadding="0" bgcolor="#fff">
+  <tr>
+    <td width="92" height="55" align="center" bgcolor="#fad0aa">星期</td>
+    <td width="92" align="center" bgcolor="#fad0aa">日期</td>
+    <td align="center" bgcolor="#fad0aa">开放区域</td>
+  </tr>
+  <tr>
+    <td height="116" align="center" bgcolor="#e3e3e3">一</td>
+    <td align="center" bgcolor="#e3e3e3">8</td>
+    <td bgcolor="#e3e3e3">
+    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>剧场：</td>
+        <td>音乐厅　戏剧场</td>
+      </tr>
+      <tr>
+        <td>展厅：</td>
+        <td>西展厅　东展厅　艺术沙龙　现代艺术馆</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="116" align="center" bgcolor="#fbeada">二</td>
+    <td align="center" bgcolor="#fbeada">9</td>
+    <td bgcolor="#fbeada">
+    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>剧场：</td>
+        <td>音乐厅　戏剧场</td>
+      </tr>
+      <tr>
+        <td>展厅：</td>
+        <td>西展厅　东展厅　艺术沙龙　现代艺术馆</td>
+      </tr>
+    </table>
+
+    </td>
+  </tr>
+  <tr>
+    <td height="116" align="center" bgcolor="#fbeada">三</td>
+    <td align="center" bgcolor="#fbeada">10</td>
+    <td bgcolor="#fbeada">
+    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>剧场：</td>
+        <td>音乐厅　戏剧场</td>
+      </tr>
+      <tr>
+        <td>展厅：</td>
+        <td>西展厅　东展厅　艺术沙龙　现代艺术馆</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="116" align="center" bgcolor="#fbeada">四</td>
+    <td align="center" bgcolor="#fbeada">11</td>
+    <td bgcolor="#fbeada">
+    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>剧场：</td>
+        <td>音乐厅　戏剧场</td>
+      </tr>
+      <tr>
+        <td>展厅：</td>
+        <td>西展厅　东展厅　艺术沙龙　现代艺术馆</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="116" align="center" bgcolor="#fbeada">五</td>
+    <td align="center" bgcolor="#fbeada">12</td>
+    <td bgcolor="#fbeada">
+    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>剧场：</td>
+        <td>音乐厅　戏剧场</td>
+      </tr>
+      <tr>
+        <td>展厅：</td>
+        <td>西展厅　东展厅　艺术沙龙　现代艺术馆</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="116" align="center" bgcolor="#fbeada">六</td>
+    <td align="center" bgcolor="#fbeada">13</td>
+    <td bgcolor="#fbeada">
+    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>剧场：</td>
+        <td>音乐厅　戏剧场</td>
+      </tr>
+      <tr>
+        <td>展厅：</td>
+        <td>西展厅　东展厅　艺术沙龙　现代艺术馆</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="116" align="center" bgcolor="#fbeada">日</td>
+    <td align="center" bgcolor="#fbeada">14</td>
+    <td bgcolor="#fbeada">
+    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>剧场：</td>
+        <td>音乐厅　戏剧场</td>
+      </tr>
+      <tr>
+        <td>展厅：</td>
+        <td>西展厅　东展厅　艺术沙龙　现代艺术馆</td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+<div class="xxinfo">参观开放时间：周二至周日及国家法定节假日9:00-17:00，周一闭馆。<br>
+
+（如遇特殊情况，请以现场公示为准）</div>
+</div>
+</div>
+
+
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.5.1.js"></script>
+<script src="js/lyz.calendar.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	
+	$(".tour_list a").click(function(){
+	
+		$(this).parent().find("a").removeClass("active");
+		$(this).addClass("active");
+	})
+	
+	$("#droup").click(function(){
+		if($(this).find("i").hasClass("act1803")){
+			$(this).find("i").removeClass("act1803");
+			$(this).find("b").html("全部收起");			
+			$("div.ddlistit").next("div").slideDown();
+			$("div.ddlistit").find("i").removeClass("act1803");
+		}else{
+			$(this).find("i").addClass("act1803");
+			$(this).find("b").html("全部展开");
+			$("div.ddlistit").next("div").slideUp();
+			$("div.ddlistit").find("i").addClass("act1803");
+			
+		}
+		
+	
+	
+	})
+	
+	
+	$(".ddlistit").click(function(){
+		if($(this).find("i").hasClass("act1803")){
+			$(this).find("i").removeClass("act1803");
+			$(this).next("div").slideDown();
+
+		}else{
+			$(this).find("i").addClass("act1803");
+			$(this).next("div").slideUp();			
+		}
+		
+	
+	
+	})
+	
+	
+	$(".downs").click(function(){
+	
+	
+		$(".kfxxboxfix").fadeIn();
+	
+	
+	})
+	
+	$("#kfxxboxclose").click(function(){
+	
+	
+		$(".kfxxboxfix").fadeOut();
+	
+	
+	})
+	
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+
+
+</body>
+</html>

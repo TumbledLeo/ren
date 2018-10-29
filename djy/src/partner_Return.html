@@ -1,0 +1,578 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+<style>
+.swiper-container {
+	width: 100%;
+	height: 860px;
+	margin: 0;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #a2a2a2;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    right: 24px;
+}
+#wrapper,#ctab1,#ctab2 {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	-ms-touch-action: none;
+	padding-bottom:2px;
+}
+
+#scroller {
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.minheight {height:0px}
+
+
+</style>
+<script type="text/javascript" src="js/iscroll.js"></script>
+
+<script type="text/javascript">
+
+var myScroll;
+
+function loaded () {
+	myScroll = new IScroll('#wrapper', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	myScroll = new IScroll('#ctab1', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+	myScroll = new IScroll('#ctab2', { eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false });
+
+}
+
+</script>
+<link href="css/lyz.calendar.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="loaded()">
+<header>
+  <span class="menu" onClick="navshow()"></span>
+  <span class="search"></span>
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:left;">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+
+<section class="slider_part">
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+
+   
+    <style>
+
+    .swiper-container {
+        width: 750px;
+        height: 580px;
+        margin: 0px auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+	.swiper-pagination-bullet { width:14px; height:14px;background: #949494;opacity: 1;}
+	.swiper-pagination-bullet-active { background-color:#0464d2;}
+	.swiper-pagination{
+		width: 100%;
+    text-align: center;
+    left: 0px;
+	}
+	.swiper-img { height:580px;}
+	.swiper-img img,.swiper-img p{ display:block;}
+	.swiper-img p{ line-height:90px; font-size:34px;  color:#666;}
+    </style>
+
+<!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            	<div class="swiper-img">
+            	<img src="images/img008.jpg" width="750" height="474"  alt=""/>
+                <p>梅赛德斯-奔驰与国家大剧院战略合作续约仪式</p>
+                </div>
+          	</div>
+            <div class="swiper-slide">
+            	<div class="swiper-img">
+            	<img src="images/img008.jpg" width="750" height="474"  alt=""/>
+                <p>梅赛德斯-奔驰与国家大剧院战略合作续约仪式</p>
+                </div>
+            
+            </div>
+            <div class="swiper-slide">
+            	<div class="swiper-img">
+            	<img src="images/img008.jpg" width="750" height="474"  alt=""/>
+                <p>梅赛德斯-奔驰与国家大剧院战略合作续约仪式</p>
+                </div>
+            
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="dist/js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 0,
+    });
+    </script>
+
+
+
+</section>
+
+<section class="part_tit">
+	合作项目及回报
+</section>
+<section class="detail_tab"><dd><a href="#">合作简介</a></dd><dd><a href="#">合作项目</a></dd><dd><a href="#" class="active">回报形式</a></dd></section>
+<section class="list" style="background-color:transparent">
+	
+    <ul class="newslist8">
+   	  <li>
+        <div class="limg">
+        
+         <img src="images/imgss.jpg" width="266" height="190"  alt=""/></div>
+        <div class="ltxt">
+            
+        	<p  class="title">宣传展示</p>
+            <p class="txtim">国家大剧院拥有种类丰富、覆盖广泛的自有媒体和合作媒体资源，可以以多种形式宣传赞助商的品牌和形象。</p>
+           	<a href="#" class="detail">详情</a>
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/imgss-02.jpg"  width="266" height="190" alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">场地使用</p>
+            <p class="txtim">国家大剧院可为赞助商提供独特的空间场所及设备，用于举办酒会、招待会、发布会等公关活动或者贵宾接待、回馈活动</p>
+           	<a href="#" class="detail">详情</a>
+        </div>
+      </li>
+      <li style="border:none">
+        <div class="limg">
+        
+        <img src="images/imgss-03.jpg"   width="266" height="190"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">接待服务</p>
+            <p class="txtim">国家大剧院可以为赞助高管、赞助商邀请的政府和社会团体领导人、高端客户、高级员工代表等提供专享贵宾服务。</p>
+           	<a href="#" class="detail">详情</a>
+        </div>
+      </li>
+     </ul> 
+ </section>     
+
+
+<section class="part_tit">
+	合作伙伴
+</section>
+<section class="content padd23" style="padding-top:36px;">
+<ul class="hzlist">
+<li>
+  <img src="images/hz.jpg" width="130" height="109"  alt=""/>
+  <p>艺术圣殿<br/>
+星辉闪耀</p>
+<p class="hzhb">战略合作伙伴</p>
+  </li>
+  <li>
+<img src="images/hz-02.jpg" width="130" height="109"  alt=""/>
+  <p>中国之美<br/>
+世界看见</p>
+<p class="hzhb">战略合作伙伴</p>
+  
+   </li>
+    <li>
+<img src="images/hz-03.jpg" width="130" height="109"  alt=""/>
+  <p>大爱无疆<br/>
+艺泽慈航</p>
+<p class="hzhb">战略合作伙伴</p>
+  
+   </li>
+    <li>
+<img src="images/hz-04.jpg" width="130" height="109"  alt=""/>
+  <p>冠冕成就<br/>
+永恒价值</p>
+<p class="hzhb">战略合作伙伴</p>
+  
+   </li>
+</ul>
+
+<div class="longhz">
+	
+  <img src="images/hz2.jpg" width="171" height="42"  alt=""/>
+  <img src="images/hz2-02.jpg"  alt=""/>
+  <img src="images/hz2-03.jpg"  alt=""/>
+
+  <img src="images/hz2-04.jpg"  alt=""/>
+  <img src="images/hz2-05.jpg"  alt=""/>
+  <img src="images/hz2-06.jpg"  alt=""/> 
+
+  	<p class="hzhb">长期合作伙伴</p>
+  
+  </div>
+</section>
+
+
+<section class="box">
+	<div class="boxtit">
+    	<b>合作动态</b>
+        <a href="#" class="more"></a>
+    </div>
+     <ul class="newslist2">
+   	  <li style="padding-top:0px;">
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"><b>来源：</b> 国家大剧院   <b> 时间：</b>2017/04/07  </p>
+
+           
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg2.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">《拉美莫尔的露琪亚》揭幕国家大剧院歌剧节·2017</p>
+            <p class="txtim"><b>来源：</b> 国家大剧院   <b> 时间：</b>2017/04/07  </p>
+
+           
+        </div>
+      </li>
+      <li style="border:none">
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"><b>来源：</b> 国家大剧院   <b> 时间：</b>2017/04/07  </p>
+           
+        </div>
+      </li>
+
+
+      
+    </ul>
+</section>
+
+<section class="box">
+	<div class="boxtit">
+    	<b>赞助手册下载</b>
+       
+    </div>
+    <div class="downs" style="font-size:0"><img src="images/down.jpg" width="750" height="340"  alt=""/></div>
+</section>
+
+
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.5.1.js"></script>
+<script src="js/lyz.calendar.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	
+	$(".tab li").mouseover(function(){
+		$(".tab li").find("span").removeClass("active");
+		$(this).find("span").addClass("active");
+		$("#tb1,#tb2,#tb3,#tb4").hide();
+		$("#"+$(this).attr("rel")).show();
+		
+	})
+	
+	//日历选项卡切换
+	$(".catab a").mouseover(function(){
+		$(".catab a").removeClass("active");
+		$(this).addClass("active");
+		$("#ctab1,#ctab2").hide();
+		$("#"+$(this).attr("rel")).fadeIn();
+		
+		
+	})
+	
+	$(".calencont ul li p:last-child").click(function(){
+		$(".calencont li p:last-child").removeClass("active");
+		$(this).addClass("active");		
+	})
+	
+	$(".calencont li[id!='hasactiv']").click(function(){			
+			$("#activ3").removeClass("minheight");
+			$("#activ3").hide();
+			
+			$("#activ3").height(438);
+			$("#activ3").slideUp();
+			$("#activ4").slideDown();
+	})
+	$("#hasactiv").click(function(){
+			$("#activ3").hide();
+			$("#activ4").hide();
+			$("#activ3").height(438);
+			$("#activ3").slideDown();
+	})
+	$(".scattr select").change(function(){
+		
+		$(this).parent().find("font").text($(this).val());	
+		
+	})
+
+	
+	  $("#txtEndDate1").calendar();
+	  $("#txtEndDate2").calendar();
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+<script src="dist/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper1 = new Swiper('.swiper1', {
+    pagination: '.swiper-pagination1',
+    paginationClickable: true,
+    spaceBetween: 0,
+	loop : true,
+});
+
+ var swiper3 = new Swiper('.swiper3', {
+        pagination: '.swiper-pagination3',
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	var swiper_t1 = new Swiper('.swiper_t1', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t2 = new Swiper('.swiper_t2', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t3 = new Swiper('.swiper_t3', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t4 = new Swiper('.swiper_t4', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	
+	
+</script>
+
+
+</body>
+</html>

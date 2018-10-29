@@ -1,0 +1,552 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+<header>
+  <span class="menu" onClick="navshow()"></span>
+  <span class="search"></span>
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:left;">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+
+
+
+
+<section class="list">
+	<div class="list_nav newsnav">
+        <dd><a href="javascript:;"  class="active" rel="tab1">演出资讯</a></dd>
+        <dd><a href="javascript:;" rel="tab2">剧院新闻</a></dd>
+        <dd><a href="javascript:;" rel="tab3">媒体视角</a></dd>
+    </div>
+    <div id="tab1">
+    <ul class="newslist2">
+   	  <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title"><img src="images/v.png"   alt=""/>大剧院再办小剧场优秀戏曲展1</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg2.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title"><img src="images/m.png"   alt=""/>《拉美莫尔的露琪亚》揭幕国家大剧院歌剧节·2017</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title"><img src="images/p.png"   alt=""/>大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27 </p>
+            
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li style="border:none">
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27  </p>
+        
+           
+        </div>
+      </li>
+
+      
+    </ul>
+    </div>
+    <div id="tab2" style="display:none">
+    <ul class="newslist2">
+   	  <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title"><img src="images/v.png"   alt=""/>大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg2.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title"><img src="images/m.png"   alt=""/>《拉美莫尔的露琪亚》揭幕国家大剧院歌剧节·2017</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title"><img src="images/p.png"   alt=""/>大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27 </p>
+            
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27  </p>
+           
+           
+        </div>
+      </li>
+      <li style="border:none">
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 2017/03/27  </p>
+        
+           
+        </div>
+      </li>
+
+      
+    </ul>
+    </div>
+    <div id="tab3" style="display:none">
+     <ul class="newslist2">
+   	  <li>
+      
+        <div class="ltxt">
+            
+        	<p  class="title"><img src="images/v.png"   alt=""/>大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 国家大剧院　　2017/04/07  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+       
+        <div class="ltxt">
+            
+        	<p  class="title"><img src="images/m.png"   alt=""/>《拉美莫尔的露琪亚》揭幕国家大剧院歌剧节《拉美莫尔的露琪亚》揭幕国家大剧院歌剧节</p>
+            <p class="txtim"> 国家大剧院　　2017/04/07  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+       
+        <div class="ltxt">
+            
+        	<p  class="title"><img src="images/p.png"   alt=""/>大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 国家大剧院　　2017/04/07  </p>
+            
+        </div>
+      </li>
+      <li>
+        
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 国家大剧院　　2017/04/07  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+       
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 国家大剧院　　2017/04/07  </p>
+           
+           
+        </div>
+      </li>
+      <li>
+       
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 国家大剧院　　2017/04/07  </p>
+           
+           
+        </div>
+      </li>
+      <li style="border:none">
+        <div class="limg">
+        
+        <img src="images/newsimg.jpg" width="246" height="139"  alt=""/> </div>
+        <div class="ltxt">
+            
+        	<p  class="title">大剧院再办小剧场优秀戏曲展</p>
+            <p class="txtim"> 国家大剧院　　2017/04/07  </p>
+        
+           
+        </div>
+      </li>
+
+      
+    </ul>
+    </div>
+    
+</section>
+
+
+<section class="moreload">
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.5.1.js"></script>
+<script src="js/lyz.calendar.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	
+	//tab
+	
+	$(".newsnav a").click(function(){
+		$(".newsnav a").removeClass("active");
+		$(this).addClass("active");
+		$("#tab1,#tab2,#tab3,#tab4").hide();
+		$("#"+$(this).attr("rel")).show();
+		
+	})
+	
+	$(".tab li").mouseover(function(){
+		$(".tab li").find("span").removeClass("active");
+		$(this).find("span").addClass("active");
+		$("#tb1,#tb2,#tb3,#tb4").hide();
+		$("#"+$(this).attr("rel")).show();
+		
+	})
+	
+	//日历选项卡切换
+	$(".catab a").mouseover(function(){
+		$(".catab a").removeClass("active");
+		$(this).addClass("active");
+		$("#ctab1,#ctab2").hide();
+		$("#"+$(this).attr("rel")).fadeIn();
+		
+		
+	})
+	
+	$(".calencont ul li p:last-child").click(function(){
+		$(".calencont li p:last-child").removeClass("active");
+		$(this).addClass("active");		
+	})
+	
+	$(".calencont li[id!='hasactiv']").click(function(){			
+			$("#activ3").removeClass("minheight");
+			$("#activ3").hide();
+			
+			$("#activ3").height(438);
+			$("#activ3").slideUp();
+			$("#activ4").slideDown();
+	})
+	$("#hasactiv").click(function(){
+			$("#activ3").hide();
+			$("#activ4").hide();
+			$("#activ3").height(438);
+			$("#activ3").slideDown();
+	})
+	$(".scattr select").change(function(){
+		
+		$(this).parent().find("font").text($(this).val());	
+		
+	})
+
+	
+	  $("#txtEndDate1").calendar();
+	  $("#txtEndDate2").calendar();
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+<script src="dist/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper1 = new Swiper('.swiper1', {
+    pagination: '.swiper-pagination1',
+    paginationClickable: true,
+    spaceBetween: 0,
+	loop : true,
+});
+
+ var swiper3 = new Swiper('.swiper3', {
+        pagination: '.swiper-pagination3',
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	var swiper_t1 = new Swiper('.swiper_t1', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t2 = new Swiper('.swiper_t2', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t3 = new Swiper('.swiper_t3', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t4 = new Swiper('.swiper_t4', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	
+	
+</script>
+
+
+</body>
+</html>

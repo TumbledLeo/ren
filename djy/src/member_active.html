@@ -1,0 +1,452 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+<header>
+  <span class="menu" onClick="navshow()"></span>
+  <span class="search"></span>
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:left;">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+<section class="mbaner">
+<div class="member_banner" style="padding-top:0px; border:none">
+<img src="images/memberbanner.jpg" width="750" height="273"  alt=""/>
+<div class="flotc">
+<p>【大师见面会】王健大师高端访谈活动...</p>
+<p>2017/04/07 13:30    戏剧场</p>
+</div>
+<a href="#" class="detail">订票</a>
+</div >
+
+
+<div  class="member_banner">
+<img src="images/memberbanner-02.jpg" width="750" height="273"  alt=""/>
+<div class="flotc">
+<p>【大师见面会】王亚彬访谈</p>
+<p>2017/04/07 13:30    戏剧场</p>
+</div>
+<a href="#" class="detail">订票</a>
+</div>
+
+
+<div  class="member_banner">
+<img src="images/memberbanner-03.jpg" width="750" height="273"  alt=""/>
+<div class="flotc">
+<p>【大师见面会】国际大师沙龙</p>
+<p>2017/04/07 13:30    戏剧场</p>
+</div>
+<a href="#" class="detail">订票</a>
+</div>
+</section>
+
+<section class="part_tit" style="margin-top:40px; padding-bottom:20px;">
+	精彩记忆
+</section>
+
+
+<section style="width:750px;position:relative; background-color:#fff; ">
+
+<link rel="stylesheet" type="text/css" href="css/style.css"/> 
+
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+<div class="wrapper">
+	<ul class="wall">
+		<li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-02.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+		<li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-02.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+		<li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-02.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+		<li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+        <li class="article">
+			
+				<div class="item">
+                    <div class="boxgrid caption">
+                        <div style="line-height:0px; font-size:0px"><img src="images/pubu-03.jpg"   alt=""/></div>
+        <div class="cover boxcaption">
+                  <h3>【大师见面会】大师高端访谈——著名指挥大师... </h3>
+                            <p>2017/01/09</p>
+                            <a href="#" class="detail">详情</a>
+                        </div>
+                    </div>
+                </div>
+			
+		</li>
+       
+	</ul>
+</div>
+
+
+		
+	
+		
+	
+	<div class="clear"></div>
+</section>
+
+<section class="moreload">
+</section>
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+
+<script src="js/jaliswall.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.wall').jaliswall({ item: '.article' });
+	});
+</script>
+
+<script>
+
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+
+
+
+
+</body>
+</html>

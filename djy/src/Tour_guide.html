@@ -1,0 +1,535 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+<style>
+.swiper-container {
+	width: 100%;
+	height: 860px;
+	margin: 0;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 100%;
+    background: #a2a2a2;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #007aff;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 10px;
+    right: 24px;
+}
+#wrapper,#ctab1,#ctab2 {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	-ms-touch-action: none;
+	padding-bottom:2px;
+}
+
+#scroller {
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.minheight {height:0px}
+
+
+</style>
+
+	<link href="css/photoswipe.css" rel="stylesheet" />
+	<link href="css/default-skin.css" rel="stylesheet" />
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/photoswipe.min.js"></script>
+	<script src="js/photoswipe-ui-default.min.js"></script>
+
+	<script src="js/jquery.transit.js"></script>
+	<script src="js/hammer.js"></script>
+	<script src="js/jquery.hammer.js"></script>
+</head>
+
+<body onload="loaded()">
+<header>
+  <span class="menu" onClick="navshow()"></span>
+  <span class="search"></span>
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:left;">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+
+<section class="banner"><img src="images/banner01.jpg" width="750" height="240"  alt=""/></section>
+
+<section class="detail_tab"><dd><a href="Tour_buy.html">参观购票</a></dd><dd><a href="Tour_notes.html">参观推荐</a></dd><dd><a href="Tour_guide.html" class="active">参观导览</a></dd></section>
+
+
+
+
+<section class="content">
+<div class="gallery">
+		<a href="images/map.jpg" data-size="750x880" data-med="images/map.jpg" data-med-size="1920x1200">
+			<img src="images/c01.jpg" width="750" height="881"  alt=""/> 
+		</a>
+ </div>
+
+</section>
+
+<section class="content block40"  style="padding-bottom:0px;">
+  <div class="ctit">公共交通</div>
+    <div class="nierong" style="padding-bottom:0px;">
+    	
+    <table width="100%" border="0" cellspacing="2" cellpadding="0">
+  <tr>
+    <td width="25%" height="60" align="center" bgcolor="#e3e3e3" style="font-size:26px;">站名</td>
+    <td width="25%" align="center" bgcolor="#e3e3e3" style="font-size:26px;">公交车</td>
+    <td width="25%" align="center" bgcolor="#e3e3e3" style="font-size:26px;">首末车时间</td>
+    <td width="25%" align="center" bgcolor="#e3e3e3" style="font-size:26px;">终起点</td>
+  </tr>
+  <tr>
+    <td rowspan="4" align="center" bgcolor="#efefef">天安门西</td>
+    <td height="60" align="center" bgcolor="#efefef">1</td>
+    <td align="center" bgcolor="#efefef">5:00-23:00</td>
+    <td align="center" bgcolor="#efefef">靛厂新村-四惠</td>
+  </tr>
+  <tr>
+    <td height="60" align="center" bgcolor="#efefef">5</td>
+    <td align="center" bgcolor="#efefef">5:10-22:30</td>
+    <td align="center" bgcolor="#efefef">德胜门-菜户营桥</td>
+  </tr>
+  <tr>
+    <td height="60" align="center" bgcolor="#efefef">92</td>
+    <td align="center" bgcolor="#efefef">5:00-24:00</td>
+    <td rowspan="3" align="center" bgcolor="#efefef">北京西站-平乐园</td>
+  </tr>
+  <tr>
+    <td height="60" align="center" bgcolor="#efefef">99</td>
+    <td align="center" bgcolor="#efefef">5:00-24:00</td>
+    </tr>
+  <tr>
+    <td align="center" bgcolor="#efefef">石碑胡同</td>
+    <td height="60" align="center" bgcolor="#efefef">52</td>
+    <td align="center" bgcolor="#efefef">5:00-24:00</td>
+    </tr>
+</table>
+<div style="height:280px">
+	<p style="font-size:26px; margin-top:40px;">地铁：1号线到天安门西站，出C口直达剧院北门入口；<br><br>
+
+自驾：观众可由大剧院东北侧入口（人大会堂西路路西）或西
+北侧入口（石碑胡同路东）驶入停车场。停车费6元/小时。<br><br>
+
+地址：北京市西城区西长安街2号</p> 
+</div>
+  </div>
+</section>
+
+
+<section class="content block40">
+  <div class="ctit">无障碍设施</div>
+  <div><img src="images/banner02.jpg" width="750" height="340"  alt=""/></div>
+    <div class="nierong">
+    <p style="font-size:26px; display:block; height:600px;">
+    　　无障碍通道位于国家大剧院东北停车场入口处，长约40米，经通道右侧的轮椅升降机，便可从大会堂西路的室外地坪直接到达大剧院北门售票大厅。平缓的斜坡、明亮的通道灯光，均是为方便残疾人士而专门设计。<br>
+      　　走进大剧院，细致入微的人性化设计和服务更是随时随处可见。<br>
+    　　专门的安检通道及人工安检，减少残疾人士等待的时间；大厅及公共空间路面平坦，定期进行防滑处理；标识导引系统、触摸屏导引系统 及免费的参观折页，为观众提供清晰明了的指引服务；北水下廊道有常设的免费饮水处；分别位于橄榄厅、音乐厅、戏剧场、枣核厅的7部专为残疾人士准备的直 梯，可到达国家大剧院各个楼层；29个残疾人专用卫生间，覆盖大剧院所有区域；四大剧场内的残疾人通道和专座，让观演无距离。国家大剧院的所有服务人员， 也将随时为广大游客提供保障与服务。</p></div>
+</section>
+
+
+
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+
+<!-- 图片弹出模态框 -->
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="pswp__bg"></div>
+		<div class="pswp__scroll-wrap">
+			<div class="pswp__container">
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+			</div>
+			<div class="pswp__ui pswp__ui--hidden">
+				<div class="pswp__top-bar" style="opacity:0;">
+					<div class="pswp__counter"></div>
+					<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+					<button class="pswp__button pswp__button--share" title="Share"></button>
+					<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+					<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+					<div class="pswp__preloader">
+						<div class="pswp__preloader__icn">
+							<div class="pswp__preloader__cut">
+								<div class="pswp__preloader__donut"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pswp__loading-indicator">
+					<div class="pswp__loading-indicator__line"></div>
+				</div>
+				<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+					<div class="pswp__share-tooltip">
+						<a href="#" class="pswp__share--facebook"></a>
+						<a href="#" class="pswp__share--twitter"></a>
+						<a href="#" class="pswp__share--pinterest"></a>
+						<a href="#" download class="pswp__share--download"></a>
+					</div>
+				</div>
+				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+				<div class="pswp__caption">
+					<div class="pswp__caption__center"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    <script type="text/javascript">
+	    (function() {//获取图片原始尺寸
+	    	// 读取尺寸大小
+	    	var imgReady = (function () {
+	    		var list = [], intervalId = null,
+	    		// 用来执行队列
+	    		tick = function () {
+	    			var i = 0;
+	    			for (; i < list.length; i++) {
+	    				list[i].end ? list.splice(i--, 1) : list[i]();
+	    			};
+	    			!list.length && stop();
+	    		},
+	    		// 停止所有定时器队列
+	    		stop = function () {
+	    			clearInterval(intervalId);
+	    			intervalId = null;
+	    		};
+	    		return function (url, ready, load, error) {
+	    			var onready, width, height, newWidth, newHeight,img = new Image();
+	    			img.src = url;
+	    			// 如果图片被缓存，则直接返回缓存数据
+	    			if (img.complete) {
+	    				ready.call(img);
+	    				load && load.call(img);
+	    				return;
+	    			};
+	    			width = img.width;
+	    			height = img.height;
+	    			img.onerror = function () {
+	    				error && error.call(img);
+	    				onready.end = true;
+	    				img = img.onload = img.onerror = null;
+	    			};
+	    			// 图片尺寸就绪
+	    			onready = function () {
+	    				newWidth = img.width;
+	    				newHeight = img.height;
+	    				if (newWidth !== width || newHeight !== height || newWidth * newHeight > 1024){
+	    					// 如果图片已经在其他地方加载可使用面积检测
+	    					ready.call(img);
+	    					onready.end = true;
+	    				};
+	    			};
+	    			onready();
+	    			// 完全加载完毕的事件
+	    			img.onload = function () {
+	    				// onload在定时器时间差范围内可能比onready快
+	    				// 这里进行检查并保证onready优先执行
+	    				!onready.end && onready();
+	    				load && load.call(img);
+	    				// IE gif动画会循环执行onload，置空onload即可
+	    				img = img.onload = img.onerror = null;
+	    			};
+	    			// 加入队列中定期执行
+	    			if (!onready.end) {
+	    				list.push(onready);
+	    				// 无论何时只允许出现一个定时器，减少浏览器性能损耗
+	    				if (intervalId === null) intervalId = setInterval(tick, 40);
+	    			};
+	    		};
+	    	})();
+			$(".article img").each(function(index, el) {//自定义——将其他图片做成这种形式
+				var self = $(this);
+				imgReady($(this).attr("src"), function () {
+					$(self).wrap('<div class="gallery"><a href="'+$(self).attr("src")+'" data-size="'+this.width+"x"+this.height+'" data-med="'+$(self).attr("src")+'" data-med-size="'+this.width+"x"+this.height+'"></div>');
+				});
+			});
+		})();
+	</script>
+	<script src="js/initPhotoSwipeFromDOM.js"></script>
+	<script>initPhotoSwipeFromDOM('.gallery');</script>
+
+
+
+
+<script src="js/jquery-1.5.1.js"></script>
+<script src="js/lyz.calendar.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+	
+	$(".tab li").mouseover(function(){
+		$(".tab li").find("span").removeClass("active");
+		$(this).find("span").addClass("active");
+		$("#tb1,#tb2,#tb3,#tb4").hide();
+		$("#"+$(this).attr("rel")).show();
+		
+	})
+	
+	//日历选项卡切换
+	$(".catab a").mouseover(function(){
+		$(".catab a").removeClass("active");
+		$(this).addClass("active");
+		$("#ctab1,#ctab2").hide();
+		$("#"+$(this).attr("rel")).fadeIn();
+		
+		
+	})
+	
+	$(".calencont ul li p:last-child").click(function(){
+		$(".calencont li p:last-child").removeClass("active");
+		$(this).addClass("active");		
+	})
+	
+	$(".calencont li[id!='hasactiv']").click(function(){			
+			$("#activ3").removeClass("minheight");
+			$("#activ3").hide();
+			
+			$("#activ3").height(438);
+			$("#activ3").slideUp();
+			$("#activ4").slideDown();
+	})
+	$("#hasactiv").click(function(){
+			$("#activ3").hide();
+			$("#activ4").hide();
+			$("#activ3").height(438);
+			$("#activ3").slideDown();
+	})
+	$(".scattr select").change(function(){
+		
+		$(this).parent().find("font").text($(this).val());	
+		
+	})
+
+	
+	  $("#txtEndDate1").calendar();
+	  $("#txtEndDate2").calendar();
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+<script src="dist/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper1 = new Swiper('.swiper1', {
+    pagination: '.swiper-pagination1',
+    paginationClickable: true,
+    spaceBetween: 0,
+	loop : true,
+});
+
+ var swiper3 = new Swiper('.swiper3', {
+        pagination: '.swiper-pagination3',
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	var swiper_t1 = new Swiper('.swiper_t1', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t2 = new Swiper('.swiper_t2', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t3 = new Swiper('.swiper_t3', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t4 = new Swiper('.swiper_t4', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	
+	
+</script>
+
+
+</body>
+</html>

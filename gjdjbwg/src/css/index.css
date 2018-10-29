@@ -214,7 +214,18 @@ header .nav li:hover{
 }
 .cang .swiper-container-horizontal > .swiper-pagination-bullets,.cang .swiper-pagination-custom,.cang .swiper-pagination-fraction {
   bottom: 242px;}
-
+  .news {
+    position: relative;
+  }
+  .news .more{
+    color: #000;
+    font-size: 18px;
+    float: right;
+    line-height: 40px;
+    position: absolute;
+    top: 68px;
+    right: 0;
+  }
   .news .tabs li a{
     display:inline-block;
     margin-right:64px;
@@ -228,7 +239,7 @@ header .nav li:hover{
     border-bottom:4px solid #e2a552;
   }
   .news .tabContent li{
-    width:100%;
+    width:96.5%;
     height:134px;
     border:1px solid #cccccc;
     padding:20px;

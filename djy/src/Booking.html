@@ -1,0 +1,206 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="dist/css/swiper.min.css">
+
+</head>
+
+<body>
+<header>
+  <span class="back" onClick=""></span>
+  <h2>填写订单</h2>
+</header>
+
+<section class="bookbox">
+	<div class="booktit"><span>选择参观时段</span></div>
+	<div class="bookcont">
+    	<div class="bookcheck"><a href="javascript:;" class="active">5月1日-5月11日</a><a href="javascript:;">5月15日-5月30日</a></div>
+        <div class="clear"></div>
+        <div class="bookread">周一闭馆，周二至周日国家法定节日9:00~17:00。</div>
+    </div>
+
+</section>
+
+
+
+<section class="bookbox">
+	<div class="booktit"><span>选择票价</span></div>
+	<div class="bookcont">
+    	<div class="bookcheck"><a href="javascript:;" class="active">¥40（普通票）</a><a href="javascript:;">¥60（纪念品套票）</a></div>
+        <div class="clear"></div>
+        <div class="bookread">* 定制游览在日常参观基础之上，还可享受咖啡厅特调饮品一杯和国家大剧院纪念品店定制赠品一份。</div>
+    </div>
+
+</section>
+
+
+<section class="bookbox">
+	<div class="booktit"><span>选择张数</span></div>
+	<div class="bookcont">
+    	<div class="booknumber"><input type="button" class="jian"><input type="text" id="number" value="1"><input type="button" class="jia"></div>
+        <div class="clear"></div>
+        <div class="bookread">单笔订单最多支持购买20张参观票。</div>
+    </div>
+
+</section>
+
+
+<section class="bookbox">
+	<div class="booktit"><span>您已选择</span></div>
+	<div class="bookcont">
+    	<div class="bookis_sel sht">5月1日-5月11日</div>
+		<div class="bookis_sel">¥40（普通票）<span>20张</span></div>
+        
+    </div>
+
+</section>
+<div class="floatbtn" id="formsub">
+<section class="formsub btnf" >
+	<button>立即购买</button>
+</section>
+</div>
+
+<footer>
+<div class="foot_nav">
+	<a href="#">登录</a> <a href="#">注册</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<!--<div class="part"><img src="images/zzs.png"   alt=""/></div>-->
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.5.1.js"></script>
+<script src="js/lyz.calendar.min.js" type="text/javascript"></script>
+<script>
+$(function(){
+
+	
+	$(window).scroll(function() {
+		
+					
+					
+					 if( $("body").scrollTop()>730){
+						 
+						 $("#formsub section").removeClass("btnf");
+						
+					 }else{
+						 $("#formsub section").addClass("btnf");
+					}
+	});
+	
+
+	$(".bookcheck a").click(function(){
+		$(this).parent().find("a").removeClass("active");
+		
+		$(this).addClass("active");
+		
+	})
+	
+	
+	$(".jia").click(function(){
+		var jia=parseInt($("#number").val())+1;
+		if(jia<=20){
+			
+			if(jia==20){
+				$(".jia").addClass("jia2");
+			}
+			$("#number").val(jia);
+			
+		}
+		
+		$(".jian").addClass("jian2");
+		
+	})
+	
+	$(".jian").click(function(){
+		
+		
+		var jian=parseInt($("#number").val())-1;
+		if(jian>=1){
+			if(jian==1){
+				$(".jian").removeClass("jian2");	
+			}
+				
+			
+			$("#number").val(jian);
+		}
+		
+	})
+	
+	
+	
+	
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+<script src="dist/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+var swiper1 = new Swiper('.swiper1', {
+    pagination: '.swiper-pagination1',
+    paginationClickable: true,
+    spaceBetween: 0,
+	loop : true,
+});
+
+ var swiper3 = new Swiper('.swiper3', {
+        pagination: '.swiper-pagination3',
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	var swiper_t1 = new Swiper('.swiper_t1', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t2 = new Swiper('.swiper_t2', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t3 = new Swiper('.swiper_t3', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	var swiper_t4 = new Swiper('.swiper_t4', {
+        paginationClickable: true,
+        spaceBetween: 10,
+		loop : true,
+    });
+	
+	
+	
+	
+</script>
+
+
+</body>
+</html>

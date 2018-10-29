@@ -1,0 +1,217 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=750,target-densitydpi=320,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="format-detection" content="telephone=no">
+<title>国家大剧院</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<style>
+
+.nav{position: absolute;z-index: 10;top: 0;	left: 0; background-color: rgba(9,48,126,0.9);width: 600px;display:none;}
+.nav .search{height: 60px;line-height: 56px;border: solid 1px #ddd;margin: 50px 30px;border-radius: 5px; width:540px;}
+.nav .search input{height: 58px;line-height:58px; width: 430px;padding-left: 20px; background-color: transparent;border:0; font-size:24px; color:#fff; float:left;}
+.nav .search .sobut{height: 60px;width: 60px;background-color: transparent;border: 0; float:right;}
+.nav .search .sobut img{height: 40px;margin: 0;}
+.collapse .panel{margin-bottom:5px}
+.collapse .panel:last-child{margin-bottom:0}
+.collapse .panel .panel-head{border-bottom: solid 1px #9fa8d2;padding: 20px 20px 20px 0;margin-left: 30px; position:relative;}
+.collapse .panel .active {border-bottom:none;}
+.collapse .panel:last-child .panel-head{border-bottom:0;}
+.collapse .panel .panel-body{display:none;margin-left: 30px;border-bottom: solid 1px #9fa8d2;}
+.active .panel-head {border-bottom: solid 1px #ddd;}
+.panel-head {height: 70px;line-height: 70px; color: #fff;}
+.panel-head a{display: block;color: #fff;}
+.panel-body li{margin-left: 20px;}
+.panel-body li a{display: block;color: #fff;height: 80px;line-height: 80px;font-size: 30px;}
+.panel-head .icon{position:absolute; right:30px; top:45px;}
+.panel-head span.icon{width:32px; height:32px; background-image:url(images/menu_icon.png); background-repeat:no-repeat; background-position:0px 0px;line-height: 32px;}
+.active span.icon{ /*content: "-"; font-size: 100px;line-height: 24px;*/background-image:url(images/menu_icon.png); background-repeat:no-repeat; background-position:0px -113px;}
+.collapse span { background-image:none}
+.nav h5 { font-weight:normal; font-size:34px;}
+.nav a.active { color:#dda526}
+.childmenu{  height:170px;}
+.childmenu li { float:left; width:250px; height:60px;line-height:60px;}
+.childmenu li a { color:rgba(255,255,255,0.7); font-size:24px;}
+.searchboxnew { padding-top:15px; height:95px; background-color:#f4f4f4; position:relative; text-align:center;}
+.newsearchinput { width:700px; height:80px; line-height:80px;  background-color:#e0e0e0; border:0px; color:#a9a9a9; font-size:28px;    border-radius: 10px;text-indent:32px;}
+.newscbtn { position:absolute;background-image:url(images/newscbtn.png); width:68px; height:40px; border:none; display:block; top:35px; right:60px; }
+.sfixed { position:fixed;top:0px; width:750px;}
+</style>
+
+
+</head>
+
+<body>
+<div style="height:250px; width:750px;">
+<header>
+  <span class="menu" onClick="navshow()"></span>
+  
+  <h1><img src="images/logo.png" ></h1>    
+  <span class="user"></span>
+  <span class="lan"></span>
+  
+  
+   <div id="overlay" onClick="navhide()"></div>
+      <div class="nav">
+		
+        <!--<div class="search">
+            <input name="so" type="text" placeholder="关键字"><button class="sobut"><img src="images/search.png"> </button>
+        </div>-->
+        <div class="collapse">
+			<div class="panel" >
+                <div class="panel-head" style="height:100px; text-align:right">
+                   <img src="images/close.png" onclick="navhide()" style="margin-top:35px;padding-right:12px;" />
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5><a href="#1">首页</a></h5>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>演出购票<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#2" class="active">精彩推荐</a></li>
+                        <li><a href="#">歌剧</a></li>
+                        <li><a href="#">音乐会</a></li>
+                        <li><a href="#">舞蹈</a></li>
+                        <li><a href="#2">戏剧</a></li>
+                        <li><a href="#">戏曲</a></li>
+                        <li><a href="#">演出检索</a></li>
+                        <li><a href="#">演出日历</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>艺术生产<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">院藏剧目</a></li>
+                        <li><a href="#">古典音乐频道</a></li>
+                        <li id="childmenu"><a href="javascript:void(0);">驻院团体</a></li>
+						<div class="childmenu">
+							<li><a href="#">国家大剧院管弦乐团</a></li>
+							<li><a href="#">国家大剧院合唱团</a></li>
+							<li><a href="#">驻院歌剧演员</a></li>
+							<li><a href="#">国家大剧院戏剧演员队</a></li>
+						</div>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>参观游览<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院景观</a></li>
+                        <li><a href="#">参观购票</a></li>
+                        <li><a href="#">艺术展览</a></li>
+                        <li><a href="#">纪念品店</a></li>
+                        <li><a href="#">餐饮服务</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>精彩活动<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">周末音乐会</a></li>
+                        <li><a href="#">经典艺术讲堂</a></li>
+                        <li><a href="#">走进唱片里的世界</a></li>
+                        <li><a href="#">会员专享</a></li>
+                        <li><a href="#">唱片签售</a></li>
+                        <li><a href="#">第五空间舞台</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-head">
+                    <h5>关于我们<span class="icon"></span></h5>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="#">剧院文化</a></li>
+                        <li><a href="#">资讯动态</a></li>
+                        <li><a href="#">会员俱乐部</a></li>
+                        <li><a href="#">招贤纳士</a></li>
+                        <li><a href="#">赞助与回报</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+  
+</header>
+<section class="searchboxnew">
+	<input type="text" class="newsearchinput" placeholder="请输入演出、艺人的名称" />
+	<input type="button" class="newscbtn" />
+</section>
+</div>
+
+
+<section>
+<img src="images/index3.jpg" />
+
+</section>
+<footer>
+<div class="foot_nav">
+	<a href="#">会员中心</a> <a href="#">退出</a> <a href="#">留言</a>  <a href="#">电脑版</a>
+</div>
+<div class="copyright">
+	<p></p>
+	<p>客服电话：8610-66550000</p>
+    <p>© 国家大剧院</p>
+</div>
+
+
+</footer>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+$(function(){
+
+	$(window).scroll(function(){
+	
+		if($("body").scrollTop()>140){
+			$(".searchboxnew").addClass("sfixed");
+		}else{
+			$(".searchboxnew").removeClass("sfixed");
+		}
+	
+	})
+
+})
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
+</script>
+
+
+
+</body>
+</html>
