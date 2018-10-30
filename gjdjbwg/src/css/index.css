@@ -561,7 +561,7 @@ footer img{
   box-shadow: none;
 }
 .swiper-container1 .swiper-pagination-bullets{
-  background:url(../img/z.png)no-repeat;
-  background-position: 50%;
+  /* background:url(../img/z.png)no-repeat;
+  background-position: 50%; */
   bottom:33px;
 }
