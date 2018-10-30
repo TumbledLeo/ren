@@ -517,6 +517,7 @@ header .nav li:hover{
 }
 .wxb,.ww{
   margin-top:76px;
+  position: relative;
 }
 .wxb a{
   display:inline-block;
@@ -537,6 +538,14 @@ footer{
 }
 footer img{
   margin-top:24px;
+}
+.showwx{
+  width:160px;
+  height:160px;
+  position: absolute;
+  top:-160px;
+  left:0;
+  display:none;
 }
 /*banner的重置*/
 .swiper-container1 .swiper-pagination-bullet{

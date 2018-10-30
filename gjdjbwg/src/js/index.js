@@ -36,6 +36,10 @@ function tabCtrl(ele) {
   });
 }
 tabCtrl('.news');
-
+$('.wx').hover(function(){
+  $('.showwx').fadeIn();
+},function(){
+  $('.showwx').fadeOut();
+});
 
 })
