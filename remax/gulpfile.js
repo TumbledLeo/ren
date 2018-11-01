@@ -36,21 +36,21 @@ gulp.task('image', function () {
 /////////////////////html////////////////////
 
 
-gulp.task('htmlmin', function () {
-  var options = {
-      removeComments: true,//清除HTML注释
-      collapseWhitespace: true,//压缩HTML
-      collapseBooleanAttributes: false,//省略布尔属性的值 <input checked="true"/> ==> <input />
-      removeEmptyAttributes: false,//删除所有空格作属性值 <input id="" /> ==> <input />
-      //removeScriptTypeAttributes: true,//删除<script>的type="text/javascript"
-      //removeStyleLinkTypeAttributes: true,//删除<style>和<link>的type="text/css"
-      minifyJS: true,//压缩页面JS
-      minifyCSS: true//压缩页面CSS
-  };
-  gulp.src([app.srcPath +'*.htm',app.srcPath +'*.html'])           
-      .pipe(htmlmin(options))
-      .pipe(gulp.dest(app.distPath ));
-});
+// gulp.task('htmlmin', function () {
+//   var options = {
+//       removeComments: true,//清除HTML注释
+//       collapseWhitespace: true,//压缩HTML
+//       collapseBooleanAttributes: false,//省略布尔属性的值 <input checked="true"/> ==> <input />
+//       removeEmptyAttributes: false,//删除所有空格作属性值 <input id="" /> ==> <input />
+//       //removeScriptTypeAttributes: true,//删除<script>的type="text/javascript"
+//       //removeStyleLinkTypeAttributes: true,//删除<style>和<link>的type="text/css"
+//       minifyJS: true,//压缩页面JS
+//       minifyCSS: true//压缩页面CSS
+//   };
+//   gulp.src([app.srcPath +'*.htm',app.srcPath +'*.html'])           
+//       .pipe(htmlmin(options))
+//       .pipe(gulp.dest(app.distPath ));
+// });
 
 ///////////////////////////////css////////////////////////
 gulp.task('cssmin',function(){
@@ -96,13 +96,13 @@ gulp.task('server', function () {
   });
 
   // 监听哪些任务
-  gulp.watch(app.srcPath + '*.html', ['htmlmin']);
+  gulp.watch(app.srcPath + '*.html', ['yun']);
   // gulp.watch(app.srcPath + 'm/*.html', ['mobile']);
   gulp.watch(app.srcPath + 'js/**/*.js', ['jsmin']);
   // gulp.watch(app.srcPath + 'm/js/**/*.js', ['mobile-js']);
   gulp.watch(app.srcPath + 'img/**/*', ['image']);
-  gulp.watch(app.srcPath + 'css/**/*.css', ['cssmin']);
-  // gulp.watch(app.srcPath + 'style/**/*.scss', ['scss']);
+  gulp.watch(app.srcPath + 'css/**/*.scss', ['cssmin']);
+  //gulp.watch(app.srcPath + 'css/**/*.scss', ['scss']);
   // gulp.watch(app.srcPath + 'm/style/**/*.scss', ['mobile-css']);
   open('http://localhost:8888');
 });
