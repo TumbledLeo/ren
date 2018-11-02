@@ -30,6 +30,9 @@ gulp.task('image', function () {
     gulp.src(app.srcPath + 'img/*.{png,jpg,gif,ico}')
         .pipe(imagemin())
         .pipe(gulp.dest(app.distPath + 'img'));
+    gulp.src(app.srcPath + 'm/img/*.{png,jpg,gif,ico}')
+        .pipe(imagemin())
+        .pipe(gulp.dest(app.distPath + 'm/img'));
 });
 
 
@@ -67,6 +70,20 @@ gulp.task('cssmin',function(){
   //.pipe(concat('main.css')) //合并css
   .pipe(cssmin())//压缩
   .pipe(gulp.dest(app.distPath +'css'));
+
+  gulp.src(app.srcPath +'m/css/*')
+  .pipe(sass())
+  .pipe(less())
+  .pipe(autoprefixer({
+    browsers: ['last 2 versions','Safari >0', 'Explorer >0', 'Edge >0', 'Opera >0', 'Firefox >=20'],//last 2 versions- 主流浏览器的最新两个版本
+    cascade: true, //是否美化属性值 默认：true 像这样：
+    //-webkit-transform: rotate(45deg);
+    //        transform: rotate(45deg);
+    remove:true //是否去掉不必要的前缀 默认：true 
+  }))
+  //.pipe(concat('main.css')) //合并css
+  .pipe(cssmin())//压缩
+  .pipe(gulp.dest(app.distPath +'m/css'));
 })
 ///////////////////////////////js//////////////////////////
 
@@ -76,11 +93,18 @@ gulp.task('jsmin',function(){
     .pipe(babel())
     .pipe(uglify())//压缩
     .pipe(gulp.dest(app.distPath +'js'));
+    gulp.src(app.srcPath +'m/js/*')
+    //.pipe(rename({suffix: '.min'}))
+    .pipe(babel())
+    .pipe(uglify())//压缩
+    .pipe(gulp.dest(app.distPath +'m/js'));
 })
 ////////////////////////////////搬运//////////////////////
 gulp.task('ban',function(){
   gulp.src(app.srcPath + 'lib/**')
-    .pipe(gulp.dest(app.distPath + 'lib'))
+    .pipe(gulp.dest(app.distPath + 'lib'));
+    gulp.src(app.srcPath + 'm/lib/**')
+    .pipe(gulp.dest(app.distPath + 'm/lib'));
 })
 gulp.task('yun',function(){
   gulp.src(app.srcPath +'**/*.html')
@@ -97,12 +121,13 @@ gulp.task('server', function () {
 
   // 监听哪些任务
   gulp.watch(app.srcPath + '*.html', ['yun']);
-  // gulp.watch(app.srcPath + 'm/*.html', ['mobile']);
+  gulp.watch(app.srcPath + 'm/*.html', ['yun']);
   gulp.watch(app.srcPath + 'js/**/*.js', ['jsmin']);
-  // gulp.watch(app.srcPath + 'm/js/**/*.js', ['mobile-js']);
+ gulp.watch(app.srcPath + 'm/js/**/*.js', ['jsmin']);
   gulp.watch(app.srcPath + 'img/**/*', ['image']);
+  gulp.watch(app.srcPath + 'm/img/**/*', ['image']);
   gulp.watch(app.srcPath + 'css/**/*.scss', ['cssmin']);
-  //gulp.watch(app.srcPath + 'css/**/*.scss', ['scss']);
+  gulp.watch(app.srcPath + 'm/css/**/*.scss', ['cssmin']);
   // gulp.watch(app.srcPath + 'm/style/**/*.scss', ['mobile-css']);
   open('http://localhost:9999');
 });
