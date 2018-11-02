@@ -92,7 +92,7 @@ gulp.task('server', function () {
   connect.server({
       root: [app.distPath],//要运行那个目录
       livereload: true,// 是否热更新
-      port: 8888 // 端口号
+      port: 7777 // 端口号
   });
 
   // 监听哪些任务
@@ -104,6 +104,6 @@ gulp.task('server', function () {
   gulp.watch(app.srcPath + 'css/**/*.scss', ['cssmin']);
   //gulp.watch(app.srcPath + 'css/**/*.scss', ['scss']);
   // gulp.watch(app.srcPath + 'm/style/**/*.scss', ['mobile-css']);
-  open('http://localhost:8888');
+  open('http://localhost:7777');
 });
 gulp.task('default', ['image','jsmin','cssmin','yun','ban','server']);
