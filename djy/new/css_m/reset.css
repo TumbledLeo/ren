@@ -1,0 +1,63 @@
+@charset "utf-8";
+/*
+Description: Reset css inside content for all pages.
+Version: 2.0
+Time: 2013-10-02 22:00
+Author: Jensen
+*/
+
+.navigation{position:fixed;left:10px;top:900px;width:60px;height:60px;z-index:999999;}
+.navigation .dot{height:60px;height:60px;position:relative;overflow: hidden;}
+.navigation .dot a{display:block;}
+.navigation .dot img{display:block;width:100%;}
+.navigation .dot .t1{display:block;}
+.navigation .dot .t2{display:none;}
+.navigation .dot a.active .t1{display:none;}
+.navigation .dot a.active .t2{display:block;}
+.navigation .cell{width:180px;height:180px;border-radius:90px;background:rgba(0,0,0,0.2);position:absolute;left:20px;top:-160px;display:none;}
+.navigation .paper{width:170px;height:170px;background:#fff;border-radius:85px;margin:5px 0px 0px 5px;}
+.navigation .paper .col{width:84px;float: left;border-right:1px solid #eee;border-bottom:1px solid #eee;text-align: center;height:84px;}
+.navigation .paper .c3,.navigation .paper .c4{border-bottom:none;}
+.navigation .paper .c2,.navigation .paper .c4{border-right:none;}
+.navigation .paper .col a{display:inline-block;width:25px;margin-top:25px;}
+.navigation .paper .col a img{display:block;width:100%;}
+.navigation .paper .middle{width:60px;height:60px;position:absolute;left:50%;top:50%;margin:-30px 0px 0px -30px;}
+.navigation .paper .middle img{display:block;width:100%;}
+.navigation .paper .c1 a{margin-left:10px;}
+.navigation .paper .c3 a{margin-top:15px;}
+.navigation .paper .c4 a{margin-top:20px;}
+
+/**2015-08-27 修改 场馆页*/
+.borbNone{ border-bottom:none !important;}
+.overhidden{ overflow:hidden;}
+.f-title-bor{border-bottom: 1px solid #eee;}
+.mb0{ margin-bottom:0 !important;}
+
+/*2016/6/6*/
+.navigation .paper{width:170px;height:170px;background:url(../img_m/scir.png) no-repeat center center;border-radius:85px;margin:5px 0px 0px 5px;background-size:100% auto;position: relative;}
+.navigation .paper .col{width:84px;float: left;border-right:none;border-bottom:none;text-align: center;height:84px;}
+.navigation .paper  .middle  img{width: 50%;height: auto;position: relative;top:15px;}
+.navigation .paper .c3 a{margin-top:10px;position: relative;left: -10px;top:-15px;}
+.navigation .paper .c4 a{margin-top:10px;position: relative;left: 15px;top:-15px;}
+.navigation .paper .c5{position:absolute;top:95px;left: 25%;z-index: 999;}
+
+/* .captch-pop {  position: fixed;left: 0; top: 0;  width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); text-align: center; overflow: auto;  z-index: 1000; }
+.gt_mobile_holder { margin-top: 100px; display: inline-block; } */
+
+.iScrollHorizontalScrollbar{
+	position: absolute;
+    z-index: 9999;
+    height: 7px;
+		left: -30px;
+		right:2px;
+    bottom: 0px;
+    overflow: hidden;
+		pointer-events: none;
+		margin-top:20px;
+}
+.iScrollIndicator{
+	background:#7ab1f0;
+	height:7px;
+	border-radius: 10px;
+	padding:20px auto;
+}
