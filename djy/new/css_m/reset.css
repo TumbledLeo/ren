@@ -1,13 +1,6 @@
-@charset "utf-8";
-/*
-Description: Reset css inside content for all pages.
-Version: 2.0
-Time: 2013-10-02 22:00
-Author: Jensen
-*/
 
 .navigation{position:fixed;left:10px;top:900px;width:60px;height:60px;z-index:999999;}
-.navigation .dot{height:60px;height:60px;position:relative;overflow: hidden;}
+.navigation .dot{height:60px;position:relative;overflow: hidden;}
 .navigation .dot a{display:block;}
 .navigation .dot img{display:block;width:100%;}
 .navigation .dot .t1{display:block;}
@@ -41,7 +34,7 @@ Author: Jensen
 
 .iScrollHorizontalScrollbar{
 	position: absolute;
-    z-index: 9999;
+    z-index: 9;
     height: 7px;
 		left: -30px;
 		right:2px;

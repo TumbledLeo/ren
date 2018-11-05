@@ -40,7 +40,7 @@ echo.init({
         </div>-->
         <div class="collapse">
 			<div class="panel" >
-                <div class="panel-head" style="height:100px; text-align:right">
+                <div class="panel-head" style="height:100px; text-align:left">
                    <img src="img_m/images/close.png" onclick="navhide()" style="margin-top:35px;padding-right:12px;" />
                 </div>
             </div>
@@ -778,68 +778,7 @@ echo.init({
 <script src="js_m/jquery-1.11.1.min.js"></script>
 <script src="js_m/index.js"></script>
 <script>
-$(function(){
-	$(".tab li").mouseover(function(){
-		$(".tab li").find("span").removeClass("active");
-		$(this).find("span").addClass("active");
-		$("#tb1,#tb2,#tb3,#tb4").hide();
-		$("#"+$(this).attr("rel")).show();
-		
-	})
-	
-    //日历选项卡切换
-   
-	// $(".catab a").mouseover(function(){
-        
-	// 	$(".catab a").removeClass("active");
-	// 	$(this).addClass("active");
-	// 	$("#ctab1,#ctab2").hide();
-	// 	$("#"+$(this).attr("rel")).fadeIn();
-		
-		
-	// })
-	
-	$(".calencont ul li p:last-child").click(function(){
-		$(".calencont li p:last-child").removeClass("active");
-		$(this).addClass("active");		
-	})
-	
-	$(".calencont li[id!='hasactiv']").click(function(){			
-			$("#activ3").removeClass("minheight");
-			$("#activ3").hide();
-			
-			$("#activ3").height(438);
-			$("#activ3").slideUp();
-			$("#activ4").slideDown();
-	})
-	$("#hasactiv").click(function(){
-			$("#activ3").hide();
-			$("#activ4").hide();
-			$("#activ3").height(438);
-			$("#activ3").slideDown();
-	})
-	
-	
-	
-	
-	
-})
-function navshow(){
-    $(".nav").show(500);
-    $("#overlay").show();
-}
-function navhide(){
-    $(".nav").hide(500);
-    $("#overlay").hide();
-}
-$(".panel-head").click(function(){
-    $(".panel-head").removeClass("active");
-    $(".panel-body").slideUp();
-    if($(this).next(".panel-body").is(":hidden")){
-        $(this).addClass("active");
-        $(this).next(".panel-body").slideDown();
-    }
-});
+
 </script>
 <script src="dist_m/js/swiper.min.js"></script>
 <!-- Initialize Swiper -->

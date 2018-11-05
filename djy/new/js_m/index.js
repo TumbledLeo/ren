@@ -60,4 +60,46 @@ $('.dot a').click(function(){
     }
 });
 
-})
+});
+$(function(){
+	$(".tab li").mouseover(function(){
+		$(".tab li").find("span").removeClass("active");
+		$(this).find("span").addClass("active");
+		$("#tb1,#tb2,#tb3,#tb4").hide();
+		$("#"+$(this).attr("rel")).show();	
+	})
+	
+	$(".calencont ul li p:last-child").click(function(){
+		$(".calencont li p:last-child").removeClass("active");
+		$(this).addClass("active");		
+	})
+	$(".calencont li[id!='hasactiv']").click(function(){			
+			$("#activ3").removeClass("minheight");
+			$("#activ3").hide();
+			$("#activ3").height(438);
+			$("#activ3").slideUp();
+			$("#activ4").slideDown();
+	})
+	$("#hasactiv").click(function(){
+			$("#activ3").hide();
+			$("#activ4").hide();
+			$("#activ3").height(438);
+			$("#activ3").slideDown();
+	})		
+});
+function navshow(){
+    $(".nav").show(500);
+    $("#overlay").show();
+}
+function navhide(){
+    $(".nav").hide(500);
+    $("#overlay").hide();
+}
+$(".panel-head").click(function(){
+    $(".panel-head").removeClass("active");
+    $(".panel-body").slideUp();
+    if($(this).next(".panel-body").is(":hidden")){
+        $(this).addClass("active");
+        $(this).next(".panel-body").slideDown();
+    }
+});
