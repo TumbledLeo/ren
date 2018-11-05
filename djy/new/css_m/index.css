@@ -221,6 +221,10 @@ font-weight: normal;
   font-size: 20px;
   margin-top:10px;
 }
+.ren5 .top img{
+  width:701px;
+  height:357px;
+}
 .ren5 .clock li p {
   font-size: 24px;
 }
@@ -263,7 +267,7 @@ font-weight: normal;
   overflow: hidden;
 }
 #wrapper3{
-  overflow: hidden;position:relative
+  overflow: hidden;position:relative;
 }
 
 /* /swiper reset */
@@ -313,7 +317,7 @@ font-weight: normal;
 	z-index: 1;
 	overflow: hidden;
 	-ms-touch-action: none;
-	padding-bottom:2px;
+	padding-bottom:16px;
 }
 
 
@@ -360,3 +364,6 @@ font-weight: normal;
 .collapse span { background-image:none}
 .nav h5 { font-weight:normal; font-size:34px;}
 .nav a.active { color:#dda526}
+.pjhd ul img,.pjhd_r ul img,.top{
+   background: url(../img_m/loadingd.gif) 50% no-repeat;
+}

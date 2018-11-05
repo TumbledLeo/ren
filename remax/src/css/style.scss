@@ -275,68 +275,70 @@ img{
 }
 
 @media (max-width: 768px){
-    .navbar-brand{
+.navbar-brand{
         width:240px;height:53px;
     }
-    .navbar-toggler-icon{
+.navbar-toggler-icon{
         background:#000;
     }
-    .mob_none{
+.mob_none{
         display:none;
     }
-    .user_logo {
-        margin-right: 142px;
+.user_logo {
+        margin-right: 98px;
     }
-    .container .right{
+.container .right{
         width:100%;}
-    .container .show .video{
-            width:100%;
-            img{
-                width:100%;
-            }
-        }
+.container .show .video{
+        width:100%;
+    img{
+        width:100%;
+    }
+}
 .container .show .v1 .v11{
     padding:0;
     width:100%;
     }
-    .container .show .video .sd li{
+.container .show .video .sd li{
         margin-right:0px;
     }
-    .container .show .video .text{
+.container .show .video .text{
         width:254px;
     }
-    .container .show .video .v11 .text {
+.container .show .video .v11 .text {
         padding:0;
-        width: 70px}
-    
-    .container .show .v1 .v12{
+        width: 50px}
+.container .v22 .v111 .left{
+        width:40px;
+    }
+.container .show .v1 .v12{
             width:100%;
             margin:20px 0 ;
             padding:0;
     }
-    .container .show .v1 .v13{
+.container .show .v1 .v13{
         width:100%;
     }
-    .swiper-container1 .swiper-wrapper li{
+.swiper-container1 .swiper-wrapper li{
         width:100%;
     }
-    footer{
-        width:100%;
-        margin:20px auto;
-        text-align: center;
-        a{
-            color:#004480;
-            display:block;
-            font-size:14px;
-        }
-        ul{
-            width:90%;
-            margin:20px auto 0;
-        }
+footer{
+    width:100%;
+    margin:20px auto;
+    text-align: center;
+     a{
+        color:#004480;
+        display:block;
+        font-size:14px;
     }
-    .container .show .v2 .wrap{
-        width:100%;
-        overflow: hidden;
+    ul{
+        width:90%;
+        margin:20px auto 0;
+    }
+}
+.container .show .v2 .wrap{
+    width:100%;
+    overflow: hidden;
     }
 }
 @media (min-width: 769px){

@@ -127,7 +127,7 @@ section.box .boxtit a.rili {background-position:left -236px;width:41px; height:4
 .catab a:first-child { background-image:url(../img_m/images/line3.jpg); background-repeat:no-repeat; background-position:right 37px;}
 .catab a.active span { color:#021b79; border-bottom:solid 4px #021b79;padding-bottom:12px; }
 .catcont { height:334px;overflow-x:scroll;overflow-y:hidden;}
-.catcont li { float:left; width:266px; height:314px;position:relative; margin-right:10px;}
+.catcont li { float:left; width:300px; height:314px;position:relative; margin-right:10px;}
 .catcont li p { height:auto;}
 .catcont li .tit { font-size:24px; color:#333; padding-left:5px; margin-top:10px; }
 .catcont li .pos {font-size:22px; color:#666;padding-left:5px;margin-top:10px; line-height:26px;}
