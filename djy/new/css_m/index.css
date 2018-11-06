@@ -6,7 +6,7 @@
 }
 .cf:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 .cf{zoom:1}
-.first_none{
+.first_none {
   display:none;
 }
 header {
