@@ -1,4 +1,19 @@
 $(function(){
+
+//浮动的按钮
+var nav = true;
+$('.dot a').click(function(){
+    if(nav){
+        $(this).addClass('active');
+        nav = false;
+        $('.cell').css("display","block");
+    }else{
+        $(this).removeClass('active');
+        nav = true;
+        $('.cell').css("display","none");
+    }
+});
+//浮动的按钮end
    // tab切换
 function tabCtrl(ele) {
     //为了isScoll 第二个隐藏的tab应用
@@ -44,36 +59,10 @@ function tabCtrl1(ele) {
     tabCtrl('.taa');
     tabCtrl1('.ren');
     tabCtrl1('.ren5');
+    
 
 
-var nav = true;
-$('.dot a').click(function(){
-    if(nav){
-        $(this).addClass('active');
-        nav = false;
-        $('.cell').css("display","block");
-    }else{
-        $(this).removeClass('active');
-        nav = true;
-        $('.cell').css("display","none");
-    }
-});
-var la = true;
-$('.la').click(function(){
-    // $(this).parent().find('.first_none').animate({height:"300px"});
-    $(this).parent().find('.first_none').slideToggle("slow");
-    if(la){
-        $(this).find('img').attr("src","img_m/sou.png");
-        la = false;
-    }else{
-        $(this).find('img').attr("src","img_m/la.png");
-        la = true;
-    }
-});
-$('.tu').click(function(){
-    $('.first_none').slideUp();
-    $('.la').find('img').attr("src","img_m/la.png");
-});
+
 });
 $(function(){
 	$(".tab li").mouseover(function(){
@@ -107,7 +96,30 @@ $(function(){
             $(this).addClass("active");
             $(this).next(".panel-body").slideDown();
         }
-    });		
+    });	
+
+    //下拉
+    var la = true;
+    $('.tu').click(function(){
+        $('.first_none').fadeOut();
+        $('.la').find('img').attr("src","img_m/la.png");
+        la = true;
+    });
+    $('.la').click(function(){
+        var This = $(this);
+    // $(this).parent().find('.first_none').animate({height:"300px"});
+    // $(this).parent().find('.first_none').slideToggle("slow"); 
+    if(la){
+        This.find('img').attr("src","img_m/sou.png");
+        This.parent().find('.first_none').fadeIn();
+        la = false;      
+    }else{
+        This.parent().find('.first_none').fadeOut();
+        This.find('img').attr("src","img_m/la.png");
+        la = true;
+        $('html,body').animate({scrollTop:2100}, 400);
+    }
+});
 });
 function navshow(){
     $(".nav").show(500);

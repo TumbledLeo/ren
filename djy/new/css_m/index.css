@@ -102,7 +102,9 @@ header {
 .ren0 .pjhd .stime{
   font-size: 20px;
 }
-
+section.box.ren{
+  margin-top: -14px;
+}
 .ren1 .calendarbox {
   margin-left: 24px;
   margin-right: 24px;
@@ -165,7 +167,6 @@ line-height: 105px;
 color: #333;
 font-size: 36px;
 font-weight: normal;
-
 }
 .ren4{
   padding:66px 0 40px;
@@ -175,6 +176,7 @@ font-weight: normal;
   display:inline-block;
   text-align: center;
   margin:0 56px;
+  transform: scale(1.5);
 }
 .ren4 a img{
 }
@@ -366,4 +368,63 @@ font-weight: normal;
 .nav a.active { color:#dda526}
 .pjhd ul img,.pjhd_r ul img,.top{
    background: url(../img_m/loadingd.gif) 50% no-repeat;
+}
+.r{
+  padding-right: 46px;
+  margin-left:24px;
+  background:url(../img_m/r.jpg)no-repeat right;
+}
+.ren1 .catab a.active span, .ren0 .catab a.active span{
+  padding-bottom:0;
+}
+.l{
+  margin-left:-50px;
+}
+.mk{
+  font-style:normal;
+  color:#f6efe3;
+  font-weight: bold;
+  font-size: 16px;
+  padding:4px;
+  display:block;
+  background:#d1af72;
+}
+.jfdh{
+  position: absolute;
+  top:10px;
+  left:10px;
+  font-size: 20px;
+  font-style:normal;
+  color:#ffeee9;
+  padding:4px 0 4px 4px;
+  background:#ff5803;
+  display: block;
+}
+.s{
+  width:0;
+  height:0;
+  overflow:hidden;
+  font-size: 0;     /*是因为, 虽然宽高度为0, 但在IE6下会具有默认的 */
+  line-height: 0;  /* 字体大小和行高, 导致盒子呈现被撑开的长矩形 */
+  border-width:17px;
+  border-style: dashed  dashed dashed solid ;/*IE6下, 设置余下三条边的border-style为dashed,即可达到透明的效果*/
+  border-color: transparent transparent transparent #ff5803; 
+  position: absolute;
+  top:0px;
+}
+.ren0 .pjhd .bt{
+  font-size: 20px;
+  bottom:20px;
+}
+.ren0 .pjhd .set1{
+  background:#fbad2d;
+  padding:10px 12px;
+  border-radius: 6px;
+  color:#fff;
+}
+.ren0 .pjhd .kp1{
+  background:#fb535b;
+  padding:10px 10px;
+  border-radius: 8px;
+  color:#fff;
 }

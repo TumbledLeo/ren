@@ -1,5 +1,5 @@
 
-.navigation{position:fixed;left:10px;top:900px;width:60px;height:60px;z-index:999999;}
+.navigation{position:fixed;left:42px;top:900px;width:60px;height:60px;z-index:999999;}
 .navigation .dot{height:60px;position:relative;overflow: hidden;}
 .navigation .dot a{display:block;}
 .navigation .dot img{display:block;width:100%;}
@@ -19,7 +19,6 @@
 .navigation .paper .c1 a{margin-left:10px;}
 .navigation .paper .c3 a{margin-top:15px;}
 .navigation .paper .c4 a{margin-top:20px;}
-
 
 /*2018/11/5*/
 .navigation .paper{width:170px;height:170px;background:url(../img_m/scir.png) no-repeat center center;border-radius:85px;margin:5px 0px 0px 5px;background-size:100% auto;position: relative;}
