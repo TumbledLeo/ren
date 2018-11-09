@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>中玺九合</title>
+  <!-- 判断是手机还是pc
+  <script>
+    function IsPC() {
+        var userAgentInfo = navigator.userAgent;
+        var Agents = ["Android", "iPhone",
+            "SymbianOS", "Windows Phone",
+            "iPad", "iPod"];
+        var flag = true;
+        for (var v = 0; v < Agents.length; v++) {
+            if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    if (!IsPC()) {
+        window.location.href = 'm/index.html';//  这是手机版网址
+    }
+</script> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="lib/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="lib/jquery-3.2.1.min.js"></script>
+  <!-- bootsrap扩展功能需要的插件<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script> -->
+  <script src="lib/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md cf ">
+        <!-- <a class="navbar-brand" href="#" style=""><img src="./img/logo.png" alt=""></a> -->
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="work.html">WORK</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="client.html">CLIENT</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="join.html">JOIN</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
+               
+          </ul>
+        </div> 
+      </nav>
+<div class="container-1 cf contact">
+    <div class="join" >
+        <h1>CONTACT</h1>
+    </div>
+    <div class="left">
+      <div class="map">
+        <img src="img/map.jpg" alt="">
+      </div>
+      <div class="us">
+        <h3>联系我们</h3>
+        <p>北京市朝阳区建外soho西区16号楼1908</p>
+        <p class="pn">57153369</p>
+        <p class="em">wangyajian@zhongxijiuhe.com</p>
+      </div>
+    </div>
+    <div class="right">
+      <form action="">
+      <input class="email" type="text" placeholder="电子邮箱">
+      <input class="user" type="text" placeholder="称呼">
+      <textarea name=""  placeholder="简介"></textarea>
+    </form>
+    </div>
+</div>
+<div class="footer"> 
+  <p class="pf"><span>@2018 Beijing</span></p>
+</div>
+<div class="home">
+    <a href="index.html">Back Home</a>
+</div>
+
+</body>
+</html>

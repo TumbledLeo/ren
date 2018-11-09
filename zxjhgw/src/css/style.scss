@@ -78,13 +78,15 @@ img{
     .nav-link{
         font-size: 18px;
         font-weight: bold;
-        width:30%;
+        // width:52%;
         height: 100%;
         margin:0 auto;
+        
     }
     .active,.nav-item:hover{
         .nav-link{
-            border-bottom:1px solid #03010e;
+            //border-bottom:1px solid #03010e;
+            background:url(../img/bb.jpg) no-repeat bottom;
         }        
     }
 }
@@ -116,7 +118,7 @@ img{
 }
 .footer{
     position: fixed;
-    bottom:40px;
+    bottom:64px;
     width:90%;
     margin:0 auto;
     text-align: right;
@@ -212,6 +214,102 @@ margin-bottom:140px;
 .work  li p{
     font-size: 16px;
     color:#555555;
+}
+//work
+.workm{
+    h2{
+        margin:44px 0;
+    }
+    img{
+        width:100%;
+        margin-bottom:100px;
+    }
+    p{
+        margin-bottom:100px;
+        font-size: 18px;
+        color:#555555;
+        line-height:30px;
+        text-indent: 2em;
+    }
+    .tit{
+        margin:0;
+        margin-bottom:20px;
+        text-indent:0;
+    }
+}
+//contact
+.contact{
+    .email,.user{
+        color:#c7c7c7;
+        width:47%;
+        height:60px;
+        font-size: 14px;
+        border:none;
+        padding:20px;  
+        
+    }
+    .email{
+        background:#f4f4f4 url(../img/email.png)no-repeat ;      
+        margin-right:4%;
+        background-position: 90% 50%;
+    }
+    .user{
+        background:#f4f4f4 url(../img/user.png)no-repeat ;
+        background-position: 90% 50%;
+    }
+    textarea{
+        width:99%;
+        height:154px;
+        font-size: 14px;
+        color:#c7c7c7;
+        display:block;
+        border:none;
+        background:#f4f4f4 url(../img/text.png)no-repeat ;
+        background-position: 96% 20%;
+        margin-top:22px;
+        padding:20px;
+    }
+    .left{
+        width:60%;
+        position: relative;
+        .map{
+            width:80%;
+        }
+        img{
+            width:100%;
+        }
+        .us{
+            position: absolute;
+            right:30px;
+            top:50%;
+            width:40%;
+            height:270px;
+            background:#6fa7ec;
+            color:#fff;
+            padding:30px 0 0 30px;
+            margin-top:-135px;
+            h3{
+                font-size: 24px;
+                margin-bottom:20px;
+            }
+            p{
+                font-size: 16px;
+               
+            }
+            .pn{
+                background:url(../img);
+                margin-top:26px;
+            }
+            .em{
+                margin-top:26px;
+                word-wrap:break-word;
+            }
+        }
+    }
+    .right{
+        width:40%;
+    }
+    
 }
 @media (min-width: 1200px){
     .container {

@@ -122,6 +122,7 @@ gulp.task('server', function () {
   // 监听哪些任务
   gulp.watch(app.srcPath + '*.html', ['yun']);
   gulp.watch(app.srcPath + 'm/*.html', ['yun']);
+  gulp.watch(app.srcPath + 'work/*.html', ['yun']);
   gulp.watch(app.srcPath + 'js/**/*.js', ['jsmin']);
  gulp.watch(app.srcPath + 'm/js/**/*.js', ['jsmin']);
   gulp.watch(app.srcPath + 'img/**/*', ['image']);
