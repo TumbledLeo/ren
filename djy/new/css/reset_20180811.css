@@ -21,7 +21,7 @@
 .navigation .paper .c4 a{margin-top:20px;}
 
 /*2018/11/5*/
-.navigation .paper{width:170px;height:170px;background:url(../img_m/scir.png) no-repeat center center;border-radius:85px;margin:5px 0px 0px 5px;background-size:100% auto;position: relative;}
+.navigation .paper{width:170px;height:170px;background:url(../images/scir_20180811.png) no-repeat center center;border-radius:85px;margin:5px 0px 0px 5px;background-size:100% auto;position: relative;}
 .navigation .paper .col{width:84px;float: left;border-right:none;border-bottom:none;text-align: center;height:84px;}
 .navigation .paper  .middle  img{width: 50%;height: auto;position: relative;top:15px;}
 .navigation .paper .c3 a{margin-top:10px;position: relative;left: -10px;top:-15px;}
