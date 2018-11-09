@@ -20,7 +20,7 @@
     }
     if (IsPC()) {
         // 跳转到电脑板的网址
-        window.location.href = '../index.html';
+        window.location.href = '../contact.html';
     }
 </script>
   <meta charset="utf-8">
@@ -39,8 +39,8 @@
       <li class="nav-item">
         <a class="nav-link" href="work.html"><span>01</span>WORK</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="about.html"><span>02</span>ABOUT</a>
+      <li class="nav-item  ">
+        <a class="nav-link active" href="about.html"><span>02</span>ABOUT</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="client.html"><span>03</span>CLIENT</a>
@@ -55,11 +55,29 @@
     <a href="javascript:;" class="close"><img src="img/close.png" alt=""></a>
   </div> 
 </nav>
-<div class="container">
-  <div class="logo">
-    <img src="img/logo.png" alt="">
-  </div>
+<div class="container contact">
+    <div class="join" >
+        <h1>CONTACT</h1>
+    </div>
+    <div class="contact1">
+      <img src="img/map.jpg" alt="">
+    </div>
+    <div class="us">
+        <h3>联系我们</h3>
+        <!-- <p>北京市朝阳区建外soho西区16号楼1908</p> -->
+        <p class="pn">57153369</p>
+        <p class="em">wangyajian@zhongxijiuhe.com</p>
+      </div>
+    <form action="">
+        <input class="email" type="text" placeholder="电子邮箱">
+        <input class="user" type="text" placeholder="称呼">
+        <textarea name=""  placeholder="简介"></textarea>
+        <button>发送</button>
+      </form>
 </div>
+<div class="return"><a href="index.html">
+    <img src="img/return.png" alt=""></a>
+  </div>
 <!-- <div class="footer">
   <p class="pf">@2018 Beijing</p>
 </div> -->

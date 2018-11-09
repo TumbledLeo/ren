@@ -269,6 +269,18 @@ margin-bottom:140px;
         margin-top:22px;
         padding:20px;
     }
+    button{
+        background:#6fa7ec;
+        border:none;
+        width:200px;
+        height:40px;
+        line-height:40px;
+        text-align: center;
+        color:#edf4fd;
+        display:block;
+        margin:40px 0;
+        float:right;
+    }
     .left{
         width:60%;
         position: relative;
@@ -297,12 +309,15 @@ margin-bottom:140px;
                
             }
             .pn{
-                background:url(../img);
+                background:url(../img/pn.png)no-repeat left;
                 margin-top:26px;
+                padding-left:30px;
             }
             .em{
                 margin-top:26px;
                 word-wrap:break-word;
+                background:url(../img/em.png)no-repeat left;
+                padding-left:30px;
             }
         }
     }

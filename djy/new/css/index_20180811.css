@@ -367,7 +367,7 @@ font-weight: normal;
 .nav h5 { font-weight:normal; font-size:34px;}
 .nav a.active { color:#dda526}
 .pjhd ul img,.pjhd_r ul img,.top{
-   background: url(../imagres/loadingd_20180811.gif) 50% no-repeat;
+   background: url(../images/loadingd_20180811.gif) 50% no-repeat;
 }
 .r{
   padding-right: 46px;
